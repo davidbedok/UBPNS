@@ -1,0 +1,172 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://settings.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://settings.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" >
+  <xs:simpleType name="FireRule">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RANDOM" />
+      <xs:enumeration value="ASC_UNID" />
+      <xs:enumeration value="DESC_UNID" />
+	  <xs:enumeration value="PRIORITY" />
+    </xs:restriction>
+  </xs:simpleType>	
+  <xs:element name="Name" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Description" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CertificateSubject" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LastModificationDate" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:date" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Width" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Height" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateHierarchyWidth" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateHierarchyHeight" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TokenGenNumber" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:long" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PositionGenNumber" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:long" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransitionGenNumber" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:long" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NoteGenNumber" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:long" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateGenNumber" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:long" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TokenPrefix" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PositionPrefix" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransitionPrefix" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NotePrefix" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatePrefix" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefaultEdgeWeight" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FireRule" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="FireRule" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SimulationTimeout" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:int" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EdgeLabel" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EdgeWeight" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Notes" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PositionLabel" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Priority" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransitionLabel" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EdgeHelpLine" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadyToFireTransitions" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Capacity" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Clock" msdata:Prefix="ns">
+    <xs:complexType>
+      <xs:attribute name="value" msdata:Prefix="ns" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

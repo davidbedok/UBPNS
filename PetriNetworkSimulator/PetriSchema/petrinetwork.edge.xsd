@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://edge.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://edge.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified"  
+	xmlns:pf="http://pointf.petrinetwork.hu" 
+	xmlns:bi="http://baseitem.petrinetwork.hu" >
+  <xs:import namespace="http://baseitem.petrinetwork.hu" schemaLocation="petrinetwork.baseitem.xsd" />
+  <xs:import namespace="http://pointf.petrinetwork.hu" schemaLocation="petrinetwork.pointf.xsd" />
+  <xs:simpleType name="EdgeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NORMAL" />
+      <xs:enumeration value="INHIBITOR" />
+      <xs:enumeration value="RESET" />
+    </xs:restriction>
+  </xs:simpleType>	  
+  <xs:simpleType name="EdgeRefType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="POSITION" />
+      <xs:enumeration value="TRANSITION" />
+    </xs:restriction>
+  </xs:simpleType>	  
+  <xs:element name="Edge" msdata:Prefix="edg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Start" msdata:Prefix="edg" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:Prefix="edg" msdata:ColumnName="Start_Text" msdata:Ordinal="1">
+              <xs:extension base="xs:string">
+                <xs:attribute name="reftype" msdata:Prefix="edg" type="EdgeRefType" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="End" msdata:Prefix="edg" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:Prefix="edg" msdata:ColumnName="End_Text" msdata:Ordinal="1">
+              <xs:extension base="xs:string">
+                <xs:attribute name="reftype" msdata:Prefix="edg" type="EdgeRefType" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="pf:CurveMiddlePointOffset" />
+      </xs:sequence>
+      <xs:attribute ref="bi:name" />
+      <xs:attribute ref="bi:unid" />
+      <xs:attribute ref="bi:showannotation" />
+      <xs:attribute name="weight" msdata:Prefix="edg" type="xs:int" />
+      <xs:attribute name="type" msdata:Prefix="edg" type="EdgeType" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

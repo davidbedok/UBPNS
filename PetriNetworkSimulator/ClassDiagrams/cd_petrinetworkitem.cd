@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="PetriNetworkSimulator.Entities.Common.Base.AbstractItem">
+    <Position X="9.25" Y="0.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAICAAgCAEAAAAKAQgAEAEAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Common\Base\AbstractItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Common.Edge.AbstractEdge">
+    <Position X="4.75" Y="4.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIoBAQAAAGAEQAAAAgIBIAAghLABAACoQAERCAAAAAA=</HashCode>
+      <FileName>Entities\Common\Edge\AbstractEdge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Common.Item.Base.AbstractNetworkItem">
+    <Position X="14" Y="4.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>oIAJAACAKggAgAAMAKIQDAQhACAgEAIAAAAAAQOAAAg=</HashCode>
+      <FileName>Entities\Common\Item\Base\AbstractNetworkItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Common.Item.Note.AbstractNote">
+    <Position X="9.75" Y="12" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAgAAAAIAAIACAACBAAAAA=</HashCode>
+      <FileName>Entities\Common\Item\Note\AbstractNote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Common.Item.Position.AbstractPosition">
+    <Position X="14" Y="12" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAgAAAAAABAAAAAAEAAgAA=</HashCode>
+      <FileName>Entities\Common\Item\Position\AbstractPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Common.Item.Transition.AbstractTransition">
+    <Position X="18" Y="12" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAJQABAGEAAQAAAggAIAoAQAAAEAAAABAAIA=</HashCode>
+      <FileName>Entities\Common\Item\Transition\AbstractTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Common.TokenPlayer.AbstractToken">
+    <Position X="9" Y="4.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAIEAAIAIAAgACADAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Common\TokenPlayer\AbstractToken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Edge.EdgePositionTransition">
+    <Position X="3.75" Y="11.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAEGAAAAAEAAAAAACAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Entities\Edge\EdgePositionTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Edge.EdgeTransitionPosition">
+    <Position X="6.75" Y="11.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAQAGAABAAEAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Entities\Edge\EdgeTransitionPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Item.NetNote.Note">
+    <Position X="9.75" Y="15.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAACAgAAABAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Entities\Item\NetNote\Note.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Item.NetPosition.Position">
+    <Position X="13.5" Y="14.25" Width="3.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQEgAAAAAAAAAQgEACIOAgAgAAABAAAgBAABAAABAAA=</HashCode>
+      <FileName>Entities\Item\NetPosition\Position.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Item.NetTransition.Transition">
+    <Position X="18.25" Y="17" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAICAAAgAAABABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Item\NetTransition\Transition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.TokenPlayer.Token">
+    <Position X="9.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\TokenPlayer\Token.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

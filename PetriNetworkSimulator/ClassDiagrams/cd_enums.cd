@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="PetriNetworkSimulator.Entities.Enums.EdgeType">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAAQAQAAEACAAAIAgIAAIAAA=</HashCode>
+      <FileName>Entities\Enums\EdgeType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Enums.EventType">
+    <Position X="3.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAEAgAEAAAAAAQEEAIEACAAAAAgIAAAAAA=</HashCode>
+      <FileName>Entities\Enums\EventType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Enums.FireRule">
+    <Position X="5.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAEAAhAAAQAAAAEACAAAACgIAAAAAA=</HashCode>
+      <FileName>Entities\Enums\FireRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Enums.TransitionType">
+    <Position X="8.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAAQAAAAEgCAAAACgIIAAAAA=</HashCode>
+      <FileName>Entities\Enums\TransitionType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="PetriNetworkSimulator.Entities.Enums.FireEvent">
+    <Position X="0.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AMAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Entities\Enums\FireEvent.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PetriNetworkSimulator.Entities.Enums.NetworkNotifierAction">
+    <Position X="0.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Enums\NetworkNotifierAction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PetriNetworkSimulator.Entities.Enums.NetworkProperty" Collapsed="true">
+    <Position X="7" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>FiAo7yAgECQIMQIDMCgAwCQAEEAgyoCOjO0AxABAAEA=</HashCode>
+      <FileName>Entities\Enums\NetworkProperty.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PetriNetworkSimulator.Entities.Enums.NetworkPropertyGroup">
+    <Position X="2.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAAAAEIAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Enums\NetworkPropertyGroup.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PetriNetworkSimulator.Entities.Enums.NetworkToolboxAction">
+    <Position X="7" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAEAAAAAAAABAAAAAAAAAAAAEAACAAAAAA=</HashCode>
+      <FileName>Entities\Enums\NetworkToolboxAction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PetriNetworkSimulator.Entities.Enums.NetworkToolboxItem">
+    <Position X="9.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAEIAQAABQQAAAAAQAgAAABAAAAAAAAAAIA=</HashCode>
+      <FileName>Entities\Enums\NetworkToolboxItem.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PetriNetworkSimulator.Entities.Enums.StateMatrixAction">
+    <Position X="5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAE=</HashCode>
+      <FileName>Entities\Enums\StateMatrixAction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

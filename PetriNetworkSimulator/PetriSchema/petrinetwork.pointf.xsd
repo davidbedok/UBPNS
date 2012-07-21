@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://pointf.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://pointf.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" >
+  <xs:element name="TopLeftPoint" msdata:Prefix="pf">
+    <xs:complexType>
+      <xs:attribute name="x" msdata:Prefix="pf" type="xs:float" />
+      <xs:attribute name="y" msdata:Prefix="pf" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Origo" msdata:Prefix="pf">
+    <xs:complexType>
+      <xs:attribute name="x" msdata:Prefix="pf" type="xs:float" />
+      <xs:attribute name="y" msdata:Prefix="pf" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LabelOffset" msdata:Prefix="pf">
+    <xs:complexType>
+      <xs:attribute name="x" msdata:Prefix="pf" type="xs:float" />
+      <xs:attribute name="y" msdata:Prefix="pf" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClockOffset" msdata:Prefix="pf">
+    <xs:complexType>
+      <xs:attribute name="x" msdata:Prefix="pf" type="xs:float" />
+      <xs:attribute name="y" msdata:Prefix="pf" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CurveMiddlePointOffset" msdata:Prefix="pf">
+    <xs:complexType>
+      <xs:attribute name="x" msdata:Prefix="pf" type="xs:float" />
+      <xs:attribute name="y" msdata:Prefix="pf" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateOrigo" msdata:Prefix="pf">
+    <xs:complexType>
+      <xs:attribute name="x" msdata:Prefix="pf" type="xs:float" />
+      <xs:attribute name="y" msdata:Prefix="pf" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

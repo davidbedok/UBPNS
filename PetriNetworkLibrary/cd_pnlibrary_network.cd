@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="PetriNetworkLibrary.Model.Network.PetriNetwork">
+    <Position X="0.75" Y="2.5" Width="4" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ATQIgJJAIwgiCSIsIhigAIUIAgANAglQBEBQDCNDgCA=</HashCode>
+      <FileName>Model\Network\PetriNetwork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

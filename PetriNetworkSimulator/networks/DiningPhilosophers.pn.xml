@@ -1,0 +1,1061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pn:PetriNetwork xmlns:pn="http://petrinetwork.hu">
+  <pn:NetworkSettings>
+    <ns:Name ns:value="Dining philosophers" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:Description ns:value="" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:CertificateSubject ns:value="E=bedok.david@nik.uni-obuda.hu, CN=David Bedok, OU=NIK, O=UNI-OBUDA, L=Budapest, S=Hungary, C=HU" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:LastModificationDate ns:value="2012.03.17 08:55:42" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:Width ns:value="1024" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:Height ns:value="768" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:StateHierarchyWidth ns:value="640" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:StateHierarchyHeight ns:value="480" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:TokenGenNumber ns:value="1118" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:PositionGenNumber ns:value="15" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:TransitionGenNumber ns:value="10" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:NoteGenNumber ns:value="2" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:StateGenNumber ns:value="1362" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:TokenPrefix ns:value="" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:PositionPrefix ns:value="P" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:TransitionPrefix ns:value="T" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:NotePrefix ns:value="N" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:StatePrefix ns:value="m" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:DefaultEdgeWeight ns:value="1" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:FireRule ns:value="RANDOM" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:SimulationTimeout ns:value="100" xmlns:ns="http://settings.petrinetwork.hu" />
+  </pn:NetworkSettings>
+  <pn:Events>
+    <pe:Event pe:name="utem" pe:type="TICK" xmlns:pe="http://event.petrinetwork.hu" />
+  </pn:Events>
+  <pn:VisualSettings>
+    <c:DefaultColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+    <c:MarkColor c:red="30" c:green="200" c:blue="30" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+    <c:SelectedColor c:red="50" c:green="50" c:blue="250" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+    <c:HelpColor c:red="200" c:green="200" c:blue="200" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+    <c:StateColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+    <c:MarkAsReadyToFireColor c:red="250" c:green="50" c:blue="50" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+    <c:ClockColor c:red="0" c:green="0" c:blue="200" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+    <f:DefaultFont fs:bold="True" fs:italic="True" fs:underline="False" fs:strikeout="False" xmlns:fs="http://fontstyle.petrinetwork.hu" xmlns:f="http://font.petrinetwork.hu">
+      <f:FontName>Arial</f:FontName>
+      <f:FontSize>10</f:FontSize>
+    </f:DefaultFont>
+    <p:DefaultEdgePen p:width="1" xmlns:p="http://pen.petrinetwork.hu" />
+    <p:DefaultPen p:width="1" xmlns:p="http://pen.petrinetwork.hu" />
+    <p:MarkPen p:width="2" xmlns:p="http://pen.petrinetwork.hu" />
+    <p:SelectedEdgePen p:width="1" xmlns:p="http://pen.petrinetwork.hu" />
+    <p:SelectedItemPen p:width="3" xmlns:p="http://pen.petrinetwork.hu" />
+    <p:HelpPen p:width="1" xmlns:p="http://pen.petrinetwork.hu" />
+    <p:StatePen p:width="1" xmlns:p="http://pen.petrinetwork.hu" />
+    <p:StateEdgePen p:width="2" xmlns:p="http://pen.petrinetwork.hu" />
+    <p:MarkAsReadyToFirePen p:width="1" xmlns:p="http://pen.petrinetwork.hu" />
+    <p:ClockPen p:width="1" xmlns:p="http://pen.petrinetwork.hu" />
+  </pn:VisualSettings>
+  <pn:VisibleSettings>
+    <ns:EdgeLabel ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:EdgeWeight ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:Notes ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:PositionLabel ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:Priority ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:TransitionLabel ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:EdgeHelpLine ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:ReadyToFireTransitions ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:Capacity ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+    <ns:Clock ns:value="True" xmlns:ns="http://settings.petrinetwork.hu" />
+  </pn:VisibleSettings>
+  <pn:Network>
+    <neit:NetworkItems xmlns:neit="http://networkitem.petrinetwork.hu">
+      <i:Transition bi:name="T1" bi:unid="0" bi:showannotation="True" i:radius="10,30776" tra:angle="87" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="151,5" pf:y="129" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="154" pf:y="139" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events>
+          <pe:ItemEvent pe:name="korte" pe:type="POSTACTIVATE" xmlns:pe="http://event.petrinetwork.hu" />
+        </i:Events>
+      </i:Transition>
+      <i:Transition bi:name="T2" bi:unid="2" bi:showannotation="True" i:radius="10,30776" tra:angle="58" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="553,5" pf:y="119" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="556" pf:y="129" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events />
+      </i:Transition>
+      <i:Transition bi:name="T3" bi:unid="4" bi:showannotation="True" i:radius="10,30776" tra:angle="36" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="20,5" pf:y="21" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="23" pf:y="31" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events />
+      </i:Transition>
+      <i:Transition bi:name="T4" bi:unid="6" bi:showannotation="True" i:radius="10,30776" tra:angle="74" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="727,5" pf:y="25" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="730" pf:y="35" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events />
+      </i:Transition>
+      <i:Transition bi:name="T5" bi:unid="8" bi:showannotation="True" i:radius="10,30776" tra:angle="29" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="386,5" pf:y="678" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="389" pf:y="688" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events />
+      </i:Transition>
+      <i:Transition bi:name="T6" bi:unid="10" bi:showannotation="True" i:radius="10,30776" tra:angle="62" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="398,5" pf:y="471" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="401" pf:y="481" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events />
+      </i:Transition>
+      <i:Transition bi:name="T7" bi:unid="12" bi:showannotation="True" i:radius="10,30776" tra:angle="42" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="162,5" pf:y="405" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="165" pf:y="415" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events />
+      </i:Transition>
+      <i:Transition bi:name="T8" bi:unid="14" bi:showannotation="True" i:radius="10,30776" tra:angle="28" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="32,5" pf:y="554" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="35" pf:y="564" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events />
+      </i:Transition>
+      <i:Transition bi:name="T9" bi:unid="16" bi:showannotation="True" i:radius="10,30776" tra:angle="72" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="621,5" pf:y="482" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="624" pf:y="492" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events />
+      </i:Transition>
+      <i:Transition bi:name="T10" bi:unid="18" bi:showannotation="True" i:radius="10,30776" tra:angle="34" tra:priority="0" tra:type="NORMAL" tra:delay="0" tra:clockRadius="5" xmlns:tra="http://transition.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="802,5" pf:y="620" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="805" pf:y="630" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="5" sf:height="20" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pf:ClockOffset pf:x="10" pf:y="10" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <i:Events />
+      </i:Transition>
+      <i:Position bi:name="Socrates" bi:unid="20" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="70" pf:y="81" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="90" pf:y="101" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens />
+        <i:Events>
+          <pe:ItemEvent pe:name="alma" pe:type="PREACTIVATE" xmlns:pe="http://event.petrinetwork.hu" />
+        </i:Events>
+      </i:Position>
+      <i:Position bi:name="Thales" bi:unid="22" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="605" pf:y="89" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="625" pf:y="109" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens />
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="Aristotle" bi:unid="24" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="696" pf:y="530" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="716" pf:y="550" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens />
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="Plato" bi:unid="26" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="373" pf:y="560" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="393" pf:y="580" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens />
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="Pythagoras" bi:unid="28" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="111" pf:y="450" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="131" pf:y="470" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens />
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="P6" bi:unid="30" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="262" pf:y="214" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="282" pf:y="234" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="1" bi:unid="90" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="P7" bi:unid="32" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="433" pf:y="219" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="453" pf:y="239" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="3" bi:unid="94" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="P8" bi:unid="34" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="494" pf:y="342" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="514" pf:y="362" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="5" bi:unid="98" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="P9" bi:unid="36" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="380" pf:y="331" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="400" pf:y="351" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="7" bi:unid="102" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="P10" bi:unid="38" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="233" pf:y="297" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="253" pf:y="317" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="9" bi:unid="106" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="fork" bi:unid="40" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="353" pf:y="144" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="373" pf:y="164" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="2" bi:unid="92" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="fork" bi:unid="42" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="139" pf:y="256" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="159" pf:y="276" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="10" bi:unid="108" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="fork" bi:unid="44" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="564" pf:y="277" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="584" pf:y="297" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="4" bi:unid="96" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="fork" bi:unid="46" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="464" pf:y="436" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="484" pf:y="456" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="6" bi:unid="100" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+      <i:Position bi:name="fork" bi:unid="48" bi:showannotation="True" i:radius="20" pos:capacitylimit="0" xmlns:pos="http://position.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="262" pf:y="413" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="282" pf:y="433" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="40" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <pos:Tokens>
+          <tok:Token bi:name="8" bi:unid="104" bi:showannotation="True" xmlns:tok="http://token.petrinetwork.hu">
+            <c:TokenColor c:red="0" c:green="0" c:blue="0" c:alpha="255" xmlns:c="http://color.petrinetwork.hu" />
+          </tok:Token>
+        </pos:Tokens>
+        <i:Events />
+      </i:Position>
+    </neit:NetworkItems>
+    <neit:Edges xmlns:neit="http://networkitem.petrinetwork.hu">
+      <edg:Edge bi:name="" bi:unid="50" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">30</edg:Start>
+        <edg:End edg:reftype="TRANSITION">0</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="-17" pf:y="25,5" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="51" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">0</edg:Start>
+        <edg:End edg:reftype="POSITION">20</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="52" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">20</edg:Start>
+        <edg:End edg:reftype="TRANSITION">4</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="53" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">32</edg:Start>
+        <edg:End edg:reftype="TRANSITION">2</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="-21" pf:y="-14" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="54" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">2</edg:Start>
+        <edg:End edg:reftype="POSITION">22</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="55" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">22</edg:Start>
+        <edg:End edg:reftype="TRANSITION">6</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="56" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">34</edg:Start>
+        <edg:End edg:reftype="TRANSITION">16</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="-16" pf:y="6" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="57" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">16</edg:Start>
+        <edg:End edg:reftype="POSITION">24</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="58" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">24</edg:Start>
+        <edg:End edg:reftype="TRANSITION">18</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="59" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">36</edg:Start>
+        <edg:End edg:reftype="TRANSITION">10</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="16,5" pf:y="1" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="60" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">10</edg:Start>
+        <edg:End edg:reftype="POSITION">26</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="61" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">38</edg:Start>
+        <edg:End edg:reftype="TRANSITION">12</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="19" pf:y="15" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="62" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">12</edg:Start>
+        <edg:End edg:reftype="POSITION">28</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="63" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">28</edg:Start>
+        <edg:End edg:reftype="TRANSITION">14</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="64" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">42</edg:Start>
+        <edg:End edg:reftype="TRANSITION">12</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="65" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">48</edg:Start>
+        <edg:End edg:reftype="TRANSITION">12</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="66" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">48</edg:Start>
+        <edg:End edg:reftype="TRANSITION">10</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="67" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">46</edg:Start>
+        <edg:End edg:reftype="TRANSITION">10</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="68" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">46</edg:Start>
+        <edg:End edg:reftype="TRANSITION">16</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="69" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">44</edg:Start>
+        <edg:End edg:reftype="TRANSITION">16</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="70" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">44</edg:Start>
+        <edg:End edg:reftype="TRANSITION">2</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="71" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">40</edg:Start>
+        <edg:End edg:reftype="TRANSITION">2</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="72" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">40</edg:Start>
+        <edg:End edg:reftype="TRANSITION">0</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="73" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">42</edg:Start>
+        <edg:End edg:reftype="TRANSITION">0</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="74" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">4</edg:Start>
+        <edg:End edg:reftype="POSITION">40</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="5,5" pf:y="-46,5" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="75" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">4</edg:Start>
+        <edg:End edg:reftype="POSITION">42</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="-20,5" pf:y="23" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="76" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">14</edg:Start>
+        <edg:End edg:reftype="POSITION">42</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="77" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">14</edg:Start>
+        <edg:End edg:reftype="POSITION">48</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="78" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">8</edg:Start>
+        <edg:End edg:reftype="POSITION">48</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="-57" pf:y="-3" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="79" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="POSITION">26</edg:Start>
+        <edg:End edg:reftype="TRANSITION">8</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="80" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">8</edg:Start>
+        <edg:End edg:reftype="POSITION">46</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="32" pf:y="11" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="81" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">18</edg:Start>
+        <edg:End edg:reftype="POSITION">46</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="-40" pf:y="36" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="82" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">18</edg:Start>
+        <edg:End edg:reftype="POSITION">44</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="78" pf:y="-20,5" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="83" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">6</edg:Start>
+        <edg:End edg:reftype="POSITION">44</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="28,5" pf:y="39" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="84" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">6</edg:Start>
+        <edg:End edg:reftype="POSITION">40</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="-48" pf:y="-43,5" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="85" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">4</edg:Start>
+        <edg:End edg:reftype="POSITION">30</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="22,5" pf:y="-48,5" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="86" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">6</edg:Start>
+        <edg:End edg:reftype="POSITION">32</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="17" pf:y="47" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="87" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">18</edg:Start>
+        <edg:End edg:reftype="POSITION">34</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="12,5" pf:y="-44" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="88" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">8</edg:Start>
+        <edg:End edg:reftype="POSITION">36</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="-55,5" pf:y="-28,5" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+      <edg:Edge bi:name="" bi:unid="89" bi:showannotation="True" edg:weight="1" edg:type="NORMAL" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:edg="http://edge.petrinetwork.hu">
+        <edg:Start edg:reftype="TRANSITION">14</edg:Start>
+        <edg:End edg:reftype="POSITION">38</edg:End>
+        <pf:CurveMiddlePointOffset pf:x="-16" pf:y="-37" xmlns:pf="http://pointf.petrinetwork.hu" />
+      </edg:Edge>
+    </neit:Edges>
+    <neit:Notes xmlns:neit="http://networkitem.petrinetwork.hu">
+      <i:Note bi:name="N1" bi:unid="90" bi:showannotation="True" i:radius="53,85165" not:attachedItem="74" xmlns:not="http://note.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="247" pf:y="23" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="297" pf:y="43" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="100" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <not:Text>new note</not:Text>
+      </i:Note>
+      <i:Note bi:name="N2" bi:unid="91" bi:showannotation="True" i:radius="53,85165" not:attachedItem="40" xmlns:not="http://note.petrinetwork.hu" xmlns:bi="http://baseitem.petrinetwork.hu" xmlns:i="http://item.petrinetwork.hu">
+        <pf:TopLeftPoint pf:x="363" pf:y="13" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:Origo pf:x="413" pf:y="33" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <pf:LabelOffset pf:x="0" pf:y="0" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sf:Size sf:width="100" sf:height="40" xmlns:sf="http://sizef.petrinetwork.hu" />
+        <not:Text>ez egy megjegyzes</not:Text>
+      </i:Note>
+    </neit:Notes>
+  </pn:Network>
+  <pn:StateHierarchy>
+    <sh:States xmlns:sh="http://statehierarchy.petrinetwork.hu">
+      <sv:StateVector sv:name="start" sv:unid="109" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="316" pf:y="242" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20" />
+          <sv:Position sv:unid="22" />
+          <sv:Position sv:unid="24" />
+          <sv:Position sv:unid="26" />
+          <sv:Position sv:unid="28" />
+          <sv:Position sv:unid="30">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="32">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="34">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="36">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="38">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="40">
+            <sv:Token sv:unid="92" />
+          </sv:Position>
+          <sv:Position sv:unid="42">
+            <sv:Token sv:unid="108" />
+          </sv:Position>
+          <sv:Position sv:unid="44">
+            <sv:Token sv:unid="96" />
+          </sv:Position>
+          <sv:Position sv:unid="46">
+            <sv:Token sv:unid="100" />
+          </sv:Position>
+          <sv:Position sv:unid="48">
+            <sv:Token sv:unid="104" />
+          </sv:Position>
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="start" sv:unid="91" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="401" pf:y="417" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="22" />
+          <sv:Position sv:unid="24" />
+          <sv:Position sv:unid="26" />
+          <sv:Position sv:unid="28" />
+          <sv:Position sv:unid="30" />
+          <sv:Position sv:unid="32">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="34">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="36">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="38">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="40" />
+          <sv:Position sv:unid="42" />
+          <sv:Position sv:unid="44">
+            <sv:Token sv:unid="96" />
+          </sv:Position>
+          <sv:Position sv:unid="46">
+            <sv:Token sv:unid="100" />
+          </sv:Position>
+          <sv:Position sv:unid="48">
+            <sv:Token sv:unid="104" />
+          </sv:Position>
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="m38" sv:unid="92" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="94" pf:y="260" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20" />
+          <sv:Position sv:unid="22">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="24" />
+          <sv:Position sv:unid="26" />
+          <sv:Position sv:unid="28" />
+          <sv:Position sv:unid="30">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="32" />
+          <sv:Position sv:unid="34">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="36">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="38">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="40" />
+          <sv:Position sv:unid="42">
+            <sv:Token sv:unid="108" />
+          </sv:Position>
+          <sv:Position sv:unid="44" />
+          <sv:Position sv:unid="46">
+            <sv:Token sv:unid="100" />
+          </sv:Position>
+          <sv:Position sv:unid="48">
+            <sv:Token sv:unid="104" />
+          </sv:Position>
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="m39" sv:unid="93" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="204" pf:y="419" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20" />
+          <sv:Position sv:unid="22" />
+          <sv:Position sv:unid="24" />
+          <sv:Position sv:unid="26">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="28" />
+          <sv:Position sv:unid="30">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="32">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="34">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="36" />
+          <sv:Position sv:unid="38">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="40">
+            <sv:Token sv:unid="92" />
+          </sv:Position>
+          <sv:Position sv:unid="42">
+            <sv:Token sv:unid="108" />
+          </sv:Position>
+          <sv:Position sv:unid="44">
+            <sv:Token sv:unid="96" />
+          </sv:Position>
+          <sv:Position sv:unid="46" />
+          <sv:Position sv:unid="48" />
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="m40" sv:unid="94" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="400" pf:y="80" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20" />
+          <sv:Position sv:unid="22" />
+          <sv:Position sv:unid="24" />
+          <sv:Position sv:unid="26" />
+          <sv:Position sv:unid="28">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="30">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="32">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="34">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="36">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="38" />
+          <sv:Position sv:unid="40">
+            <sv:Token sv:unid="92" />
+          </sv:Position>
+          <sv:Position sv:unid="42" />
+          <sv:Position sv:unid="44">
+            <sv:Token sv:unid="96" />
+          </sv:Position>
+          <sv:Position sv:unid="46">
+            <sv:Token sv:unid="100" />
+          </sv:Position>
+          <sv:Position sv:unid="48" />
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="m41" sv:unid="95" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="542" pf:y="203" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20" />
+          <sv:Position sv:unid="22" />
+          <sv:Position sv:unid="24">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="26" />
+          <sv:Position sv:unid="28" />
+          <sv:Position sv:unid="30">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="32">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="34" />
+          <sv:Position sv:unid="36">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="38">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="40">
+            <sv:Token sv:unid="92" />
+          </sv:Position>
+          <sv:Position sv:unid="42">
+            <sv:Token sv:unid="108" />
+          </sv:Position>
+          <sv:Position sv:unid="44" />
+          <sv:Position sv:unid="46" />
+          <sv:Position sv:unid="48">
+            <sv:Token sv:unid="104" />
+          </sv:Position>
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="m44" sv:unid="100" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="122" pf:y="376" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20" />
+          <sv:Position sv:unid="22">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="24" />
+          <sv:Position sv:unid="26">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="28" />
+          <sv:Position sv:unid="30">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="32" />
+          <sv:Position sv:unid="34">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="36" />
+          <sv:Position sv:unid="38">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="40" />
+          <sv:Position sv:unid="42">
+            <sv:Token sv:unid="108" />
+          </sv:Position>
+          <sv:Position sv:unid="44" />
+          <sv:Position sv:unid="46" />
+          <sv:Position sv:unid="48" />
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="m45" sv:unid="101" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="180" pf:y="94" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20" />
+          <sv:Position sv:unid="22">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="24" />
+          <sv:Position sv:unid="26" />
+          <sv:Position sv:unid="28">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="30">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="32" />
+          <sv:Position sv:unid="34">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="36">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="38" />
+          <sv:Position sv:unid="40" />
+          <sv:Position sv:unid="42" />
+          <sv:Position sv:unid="44" />
+          <sv:Position sv:unid="46">
+            <sv:Token sv:unid="100" />
+          </sv:Position>
+          <sv:Position sv:unid="48" />
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="m50" sv:unid="112" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="313" pf:y="399" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="22" />
+          <sv:Position sv:unid="24" />
+          <sv:Position sv:unid="26">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="28" />
+          <sv:Position sv:unid="30" />
+          <sv:Position sv:unid="32">
+            <sv:Token sv:unid="110" />
+          </sv:Position>
+          <sv:Position sv:unid="34">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="36" />
+          <sv:Position sv:unid="38">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="40" />
+          <sv:Position sv:unid="42" />
+          <sv:Position sv:unid="44">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="46" />
+          <sv:Position sv:unid="48" />
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="m62" sv:unid="130" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="503" pf:y="87" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20" />
+          <sv:Position sv:unid="22" />
+          <sv:Position sv:unid="24">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="26" />
+          <sv:Position sv:unid="28">
+            <sv:Token sv:unid="106" />
+          </sv:Position>
+          <sv:Position sv:unid="30">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="32">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="34" />
+          <sv:Position sv:unid="36">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="38" />
+          <sv:Position sv:unid="40">
+            <sv:Token sv:unid="92" />
+          </sv:Position>
+          <sv:Position sv:unid="42" />
+          <sv:Position sv:unid="44" />
+          <sv:Position sv:unid="46" />
+          <sv:Position sv:unid="48" />
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+      <sv:StateVector sv:name="m74" sv:unid="156" sv:radius="20" xmlns:sv="http://statevector.petrinetwork.hu">
+        <pf:StateOrigo pf:x="554" pf:y="343" xmlns:pf="http://pointf.petrinetwork.hu" />
+        <sv:TokenDistributions>
+          <sv:Position sv:unid="20">
+            <sv:Token sv:unid="90" />
+          </sv:Position>
+          <sv:Position sv:unid="22" />
+          <sv:Position sv:unid="24">
+            <sv:Token sv:unid="98" />
+          </sv:Position>
+          <sv:Position sv:unid="26" />
+          <sv:Position sv:unid="28" />
+          <sv:Position sv:unid="30" />
+          <sv:Position sv:unid="32">
+            <sv:Token sv:unid="94" />
+          </sv:Position>
+          <sv:Position sv:unid="34" />
+          <sv:Position sv:unid="36">
+            <sv:Token sv:unid="102" />
+          </sv:Position>
+          <sv:Position sv:unid="38">
+            <sv:Token sv:unid="154" />
+          </sv:Position>
+          <sv:Position sv:unid="40" />
+          <sv:Position sv:unid="42" />
+          <sv:Position sv:unid="44" />
+          <sv:Position sv:unid="46" />
+          <sv:Position sv:unid="48">
+            <sv:Token sv:unid="153" />
+          </sv:Position>
+        </sv:TokenDistributions>
+        <sv:Events />
+      </sv:StateVector>
+    </sh:States>
+    <sh:Edges xmlns:sh="http://statehierarchy.petrinetwork.hu">
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>109</se:StartState>
+        <se:EndState>91</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>109</se:StartState>
+        <se:EndState>92</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>109</se:StartState>
+        <se:EndState>93</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>109</se:StartState>
+        <se:EndState>94</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>109</se:StartState>
+        <se:EndState>95</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>92</se:StartState>
+        <se:EndState>109</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>92</se:StartState>
+        <se:EndState>100</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>92</se:StartState>
+        <se:EndState>101</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>100</se:StartState>
+        <se:EndState>93</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>100</se:StartState>
+        <se:EndState>92</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>93</se:StartState>
+        <se:EndState>112</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>93</se:StartState>
+        <se:EndState>100</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>93</se:StartState>
+        <se:EndState>109</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>94</se:StartState>
+        <se:EndState>101</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>94</se:StartState>
+        <se:EndState>109</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>94</se:StartState>
+        <se:EndState>130</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>101</se:StartState>
+        <se:EndState>94</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>101</se:StartState>
+        <se:EndState>92</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>130</se:StartState>
+        <se:EndState>95</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>130</se:StartState>
+        <se:EndState>94</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>95</se:StartState>
+        <se:EndState>156</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>95</se:StartState>
+        <se:EndState>130</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>95</se:StartState>
+        <se:EndState>109</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>91</se:StartState>
+        <se:EndState>109</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>91</se:StartState>
+        <se:EndState>112</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>91</se:StartState>
+        <se:EndState>156</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>156</se:StartState>
+        <se:EndState>95</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>156</se:StartState>
+        <se:EndState>91</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>112</se:StartState>
+        <se:EndState>93</se:EndState>
+      </se:StateEdge>
+      <se:StateEdge xmlns:se="http://stateedge.petrinetwork.hu">
+        <se:StartState>112</se:StartState>
+        <se:EndState>91</se:EndState>
+      </se:StateEdge>
+    </sh:Edges>
+  </pn:StateHierarchy>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>GYH/jaDTrU7dKb18qegqshjuTbs=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>kRTIkkmHQH+ks2FETYN/9csn4Qp8OzLv45/Xj8saRtPFgAMDH6tYkMKFituAGcPSrXNz1dIco+mB4eshGg/odsdpnS4jxi4NpDbmGu8vOX4qMGG6J7fMhp8+inTc6JFyx/o10O1Jdgyult2+yRenOQaCwpKmZGty45fNhuih72g=</SignatureValue>
+  </Signature>
+</pn:PetriNetwork>

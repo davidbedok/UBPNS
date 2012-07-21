@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.AboutForm">
+    <Position X="0.75" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAiAAACAAABAEAACAAAACAAAAAAAAACAQAAAAAAA=</HashCode>
+      <FileName>Forms\Dialogs\AboutForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Main.MDIParent" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="1" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>L8b+198GR+iwo2xnfWqL5SeLLAnoyAW8WsfdQ7QTwHk=</HashCode>
+      <FileName>Forms\Main\MDIParent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.LoginForm">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAEIAABACAAEBABAACAAgACBAAAAABAACAAAABCAAA=</HashCode>
+      <FileName>Forms\Dialogs\LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Main.PetriNetworkForm">
+    <Position X="6.25" Y="1" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AERTBbgCJiFgmBEhIEiwICICqAAwABCAFSAgcBQKAgA=</HashCode>
+      <FileName>Forms\Main\PetriNetworkForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

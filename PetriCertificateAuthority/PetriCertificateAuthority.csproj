@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9858B8EF-24BD-4A20-B314-E6F83A5EFB5A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PetriCertificateAuthority</RootNamespace>
+    <AssemblyName>PetriCertificateAuthority</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="end\05_create_endcert.bat" />
+    <None Include="end\07_final.bat" />
+    <None Include="end\davidbedok\davidbedok.alias" />
+    <None Include="end\davidbedok\davidbedok.der" />
+    <None Include="end\davidbedok\davidbedok.key.pas" />
+    <None Include="end\davidbedok\davidbedok.long.pem.cer" />
+    <None Include="end\davidbedok\davidbedok.pem.cer" />
+    <None Include="end\davidbedok\davidbedok.store.pas" />
+    <None Include="end\davidbedok\davidbedok.store.pfx.pas" />
+    <None Include="end\davidbedok\davidbedok.tmp.pem.cer" />
+    <None Include="end\davidbedok\davidbedok_private.jks" />
+    <None Include="end\davidbedok\davidbedok_private.pfx" />
+    <None Include="end\davidbedok\davidbedok_private_tool.pfx" />
+    <None Include="end\davidbedok\davidbedok_public.jks" />
+    <None Include="end\davidbedok\davidbedok_public.jks.pas" />
+    <None Include="end\davidbedok\davidbedok_public_tool.pfx" />
+    <None Include="end\davidbedok\davidbedok_truststore.jks" />
+    <None Include="end\davidbedok\davidbedok_truststore.jks.pas" />
+    <None Include="end\davidbedok\sharedata_davidbedok.bat" />
+    <None Include="end\ericsson\ericsson.alias" />
+    <None Include="end\ericsson\ericsson.der" />
+    <None Include="end\ericsson\ericsson.key.pas" />
+    <None Include="end\ericsson\ericsson.long.pem.cer" />
+    <None Include="end\ericsson\ericsson.pem.cer" />
+    <None Include="end\ericsson\ericsson.store.pas" />
+    <None Include="end\ericsson\ericsson.store.pfx.pas" />
+    <None Include="end\ericsson\ericsson.tmp.pem.cer" />
+    <None Include="end\ericsson\ericsson_private.jks" />
+    <None Include="end\ericsson\ericsson_private.pfx" />
+    <None Include="end\ericsson\ericsson_private_tool.pfx" />
+    <None Include="end\ericsson\ericsson_public.jks" />
+    <None Include="end\ericsson\ericsson_public.jks.pas" />
+    <None Include="end\ericsson\ericsson_public_tool.pfx" />
+    <None Include="end\ericsson\ericsson_truststore.jks" />
+    <None Include="end\ericsson\ericsson_truststore.jks.pas" />
+    <None Include="end\ericsson\sharedata_ericsson.bat" />
+    <None Include="end\uniobuda\sharedata_uniobuda.bat" />
+    <None Include="end\uniobuda\uniobuda.alias" />
+    <None Include="end\uniobuda\uniobuda.der" />
+    <None Include="end\uniobuda\uniobuda.key.pas" />
+    <None Include="end\uniobuda\uniobuda.long.pem.cer" />
+    <None Include="end\uniobuda\uniobuda.pem.cer" />
+    <None Include="end\uniobuda\uniobuda.store.pas" />
+    <None Include="end\uniobuda\uniobuda.store.pfx.pas" />
+    <None Include="end\uniobuda\uniobuda.tmp.pem.cer" />
+    <None Include="end\uniobuda\uniobuda_private.jks" />
+    <None Include="end\uniobuda\uniobuda_private.pfx" />
+    <None Include="end\uniobuda\uniobuda_private_tool.pfx" />
+    <None Include="end\uniobuda\uniobuda_public.jks" />
+    <None Include="end\uniobuda\uniobuda_public.jks.pas" />
+    <None Include="end\uniobuda\uniobuda_public_tool.pfx" />
+    <None Include="end\uniobuda\uniobuda_public_tool_nopass.pfx" />
+    <None Include="end\uniobuda\uniobuda_truststore.jks" />
+    <None Include="end\uniobuda\uniobuda_truststore.jks.pas" />
+    <None Include="license\davidbedok_private.pfx" />
+    <None Include="license\ericsson_private.pfx" />
+    <None Include="license\uniobuda_private.pfx" />
+    <None Include="rootca\.rnd" />
+    <None Include="rootca\01_create_rootca.bat" />
+    <None Include="rootca\03_sign_subca.bat" />
+    <None Include="rootca\certs\01.pem" />
+    <None Include="rootca\certs\petrirootca.der" />
+    <None Include="rootca\certs\petrirootca.pem.cer" />
+    <None Include="rootca\crl\petrisubca.csr" />
+    <None Include="rootca\database.txt.attr" />
+    <None Include="rootca\database.txt.old" />
+    <None Include="rootca\keys\petrirootca.key" />
+    <None Include="rootca\keys\petrirootca.key.pas" />
+    <None Include="rootca\serial.txt.old" />
+    <None Include="rootca\store\petrirootca.jks" />
+    <None Include="rootca\store\petrirootca.jks.pas" />
+    <None Include="setdir.bak" />
+    <None Include="setdir.bat" />
+    <None Include="sharecommon.bat" />
+    <None Include="sharedata.bat" />
+    <None Include="subca\.rnd" />
+    <None Include="subca\02_create_subca.bat" />
+    <None Include="subca\04_convert_subca.bat" />
+    <None Include="subca\06_sign_endcert.bat" />
+    <None Include="subca\certs\01.pem" />
+    <None Include="subca\certs\02.pem" />
+    <None Include="subca\certs\petrisubca.der" />
+    <None Include="subca\certs\petrisubca.pem.cer" />
+    <None Include="subca\crl\davidbedok.csr" />
+    <None Include="subca\crl\uniobuda.csr" />
+    <None Include="subca\database.txt.attr" />
+    <None Include="subca\database.txt.attr.old" />
+    <None Include="subca\database.txt.old" />
+    <None Include="subca\keys\petrisubca.key" />
+    <None Include="subca\keys\petrisubca.pas" />
+    <None Include="subca\serial.txt.old" />
+    <None Include="subca\store\petrisubca.jks" />
+    <None Include="subca\store\petrisubca.jks.pas" />
+    <None Include="subca\store\petrisubca.path.jks" />
+    <None Include="subca\store\petrisubca.path.jks.pas" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="end\davidbedok\davidbedok_private.jks.create.list.txt" />
+    <Content Include="end\davidbedok\davidbedok_private.jks.list.txt" />
+    <Content Include="end\davidbedok\davidbedok_private.jks.rootca.list.txt" />
+    <Content Include="end\davidbedok\davidbedok_private.jks.subca.list.txt" />
+    <Content Include="end\davidbedok\davidbedok_private.pfx.list.txt" />
+    <Content Include="end\davidbedok\davidbedok_public.jks.list.txt" />
+    <Content Include="end\davidbedok\davidbedok_truststore.jks.list.txt" />
+    <Content Include="end\ericsson\ericsson_private.jks.create.list.txt" />
+    <Content Include="end\ericsson\ericsson_private.jks.list.txt" />
+    <Content Include="end\ericsson\ericsson_private.jks.rootca.list.txt" />
+    <Content Include="end\ericsson\ericsson_private.jks.subca.list.txt" />
+    <Content Include="end\ericsson\ericsson_private.pfx.list.txt" />
+    <Content Include="end\ericsson\ericsson_public.jks.list.txt" />
+    <Content Include="end\ericsson\ericsson_truststore.jks.list.txt" />
+    <Content Include="end\uniobuda\uniobuda_private.jks.create.list.txt" />
+    <Content Include="end\uniobuda\uniobuda_private.jks.list.txt" />
+    <Content Include="end\uniobuda\uniobuda_private.jks.rootca.list.txt" />
+    <Content Include="end\uniobuda\uniobuda_private.jks.subca.list.txt" />
+    <Content Include="end\uniobuda\uniobuda_private.pfx.list.txt" />
+    <Content Include="end\uniobuda\uniobuda_public.jks.list.txt" />
+    <Content Include="end\uniobuda\uniobuda_truststore.jks.list.txt" />
+    <Content Include="license\passwords.txt" />
+    <Content Include="rootca\database.txt" />
+    <Content Include="rootca\openssl.conf" />
+    <Content Include="rootca\serial.txt" />
+    <Content Include="rootca\store\petrirootca.jks.list.txt" />
+    <Content Include="subca\database.txt" />
+    <Content Include="subca\openssl.conf" />
+    <Content Include="subca\serial.txt" />
+    <Content Include="subca\store\petrisubca.jks.list.txt" />
+    <Content Include="subca\store\petrisubca.path.jks.list.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

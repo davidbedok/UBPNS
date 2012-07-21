@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PetriNetworkFiles" 
+	targetNamespace="http://files.petrinetwork.hu" 
+	xmlns:mstns="http://files.petrinetwork.hu" 
+	xmlns="http://files.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" 
+	xmlns:rf="http://recentfile.petrinetwork.hu">
+  <xs:import namespace="http://recentfile.petrinetwork.hu" schemaLocation="recentfiles_rf.xsd" />
+  <xs:element name="PetriNetworkFiles" msdata:IsDataSet="true" msdata:Locale="en-US" msdata:Prefix="fpn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="rf:RecentFile" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

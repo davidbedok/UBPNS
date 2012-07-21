@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="PetriNetworkSimulator.Forms.Common.GeneralDialogForm">
+    <Position X="5.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAIgAAADQAAAAAAACAAAACBAAAAEAABAAAIAAAAAA=</HashCode>
+      <FileName>Forms\Common\GeneralDialogForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.StateVectorProperties">
+    <Position X="3.25" Y="5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAACEAQADAEABAQAAKAAAACEAAAAFIAQCAAEAAEAAA=</HashCode>
+      <FileName>Forms\Dialogs\StateVectorProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.TextExportForm">
+    <Position X="4.75" Y="8.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAADAAAAAAAgCAAAACAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Forms\Dialogs\TextExportForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.TrustStoreForm">
+    <Position X="6.25" Y="5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAjAAAAAAAACAgAACAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Forms\Dialogs\TrustStoreForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.ApplicationOptions">
+    <Position X="2" Y="8.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQALAAABAAAICAAAACAAAAAEAAACAAAQAAAAA=</HashCode>
+      <FileName>Forms\Dialogs\ApplicationOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.CertificateForm">
+    <Position X="0.5" Y="5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAQADCCIBAYABCAIAACAAAAAAAAQGAAAEQAQAA=</HashCode>
+      <FileName>Forms\Dialogs\CertificateForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.ChangeTextValueForm">
+    <Position X="10.75" Y="8.25" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADAEAQAAAACAAAACAAAAAAAAACAAAAAhgAA=</HashCode>
+      <FileName>Forms\Dialogs\ChangeTextValueForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.CreateNewPetriNetwork">
+    <Position X="8" Y="8.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>cgABAJCQADEEABAAACCAAAACRAAIAGAAgCABCAQAAAA=</HashCode>
+      <FileName>Forms\Dialogs\CreateNewPetriNetwork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.StateHierarchySetting">
+    <Position X="9.5" Y="5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAADAAQBAAAACAAAACAAAAAEAAgCAACAAAAAA=</HashCode>
+      <FileName>Forms\Dialogs\StateHierarchySetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.StateMatrixSetting">
+    <Position X="12.5" Y="5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAjAAABAAAACAAAACAAAIAUAAACAAAAABAAA=</HashCode>
+      <FileName>Forms\Dialogs\StateMatrixSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

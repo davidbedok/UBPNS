@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="PetriNetworkSimulator.Entities.Common.Network.AbstractNetwork" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BDAEiII0AMiPCIMkgBiAgIEoQhABDAtYAQgBTicAAQQ=</HashCode>
+      <FileName>Entities\Common\Network\AbstractNetwork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Network.PetriNetwork" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QYaoABAABwhuAWY8YhrCIMQIAgQNABAoBEhSSBNBgAk=</HashCode>
+      <FileName>Entities\Network\PetriNetwork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Utils.NetworkVisibleSettings">
+    <Position X="6.25" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgQAAcAEAQBAIBEIACAQAgAAABADACAIgAAIAAAAA=</HashCode>
+      <FileName>Entities\Utils\NetworkVisibleSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Utils.NetworkVisualSettings">
+    <Position X="3" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CmqgQVtKoGJ+iCgmDAIgAoi6IgCJ2CkYRwEM+O4oKkE=</HashCode>
+      <FileName>Entities\Utils\NetworkVisualSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Utils.PetriXmlHelper">
+    <Position X="8.75" Y="4.75" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CABAQAhAkKBAJABVABAEACEEBCAKYBoAIRIAQARAAEA=</HashCode>
+      <FileName>Entities\Utils\PetriXmlHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Utils.GeneralStatistics">
+    <Position X="1" Y="4.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gCAAAICAAAAAgAAEBAAAAAQAAAAAACIAAAAgAAACAAA=</HashCode>
+      <FileName>Utils\GeneralStatistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Utils.IdentityProvider">
+    <Position X="6.25" Y="4.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQgBAAUIAQQEAAAAoAAAICAIAAACAAAAAEAGAAAIA=</HashCode>
+      <FileName>Entities\Utils\IdentityProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Utils.FireReturn">
+    <Position X="9.5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAEAAACAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Utils\FireReturn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PetriNetworkSimulator.Entities.Common.Base.IPetriItem">
+    <Position X="1" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Common\Base\IPetriItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

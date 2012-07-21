@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fpn:PetriNetworkFiles xmlns:fpn="http://files.petrinetwork.hu">
+	<rf:RecentFile xmlns:rf="http://recentfile.petrinetwork.hu">
+		<rf:NetworkName>Dining philosophers</rf:NetworkName>
+		<rf:FileName>e:\workspacecsharp\PetriNetwork\PetriNetworks\Dining_philosophers.pn.xml</rf:FileName>
+		<rf:Description>This is a Dining philosophers network.</rf:Description>
+	</rf:RecentFile>
+	<rf:RecentFile xmlns:rf="http://recentfile.petrinetwork.hu">
+		<rf:NetworkName>Timed clock</rf:NetworkName>
+		<rf:FileName>e:\workspacecsharp\PetriNetwork\PetriNetworks\Timed_clock.pn.xml</rf:FileName>
+		<rf:Description>This is a Timed clock network.</rf:Description>
+	</rf:RecentFile>		
+</fpn:PetriNetworkFiles>

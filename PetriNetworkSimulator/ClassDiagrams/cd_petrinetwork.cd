@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="PetriNetworkSimulator.Entities.Common.Network.AbstractNetwork">
+    <Position X="1" Y="0.5" Width="4" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BDAEiII0AMiPCIMkgBiAgIEoQhABDAtYAQgBTicAAQQ=</HashCode>
+      <FileName>Entities\Common\Network\AbstractNetwork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetriNetworkSimulator.Entities.Network.PetriNetwork">
+    <Position X="5.5" Y="0.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QYaoABAABwhuAWY8YhrCIMQIAgQNABAoBEhSSBNBgAk=</HashCode>
+      <FileName>Entities\Network\PetriNetwork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="PetriNetworkSimulator.Forms.Common.GeneralDialogForm" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAIgAAADQAAAAAAACAAAACBAAAAEAABAAAIAAAAAA=</HashCode>
+      <FileName>Forms\Common\GeneralDialogForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.StateVectorProperties" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAACEAQADAEABAQAAKAAAACEAAAAFIAQCAAEAAEAAA=</HashCode>
+      <FileName>Forms\Dialogs\StateVectorProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.TextExportForm" Collapsed="true">
+    <Position X="3.5" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAADAAAAAAAgCAAAACAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Forms\Dialogs\TextExportForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.TrustStoreForm" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAjAAAAAAAACAgAACAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Forms\Dialogs\TrustStoreForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.ApplicationOptions" Collapsed="true">
+    <Position X="1.25" Y="3" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="PetriNetworkSimulator.Forms.Common.GeneralDialogForm" ManuallyRouted="true">
+      <Path>
+        <Point X="5.375" Y="1.191" />
+        <Point X="5.375" Y="1.582" />
+        <Point X="2.125" Y="1.582" />
+        <Point X="2.125" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQALAAABAAAICAAAACAAAAAEAAACAAAQAAAAA=</HashCode>
+      <FileName>Forms\Dialogs\ApplicationOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.CertificateForm" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAQADCCIBAYABCAIAACAAAAAAAAQGAAAEQAQAA=</HashCode>
+      <FileName>Forms\Dialogs\CertificateForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.ChangeTextValueForm" Collapsed="true">
+    <Position X="7.5" Y="3" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADAEAQAAAACAAAACAAAAAAAAACAAAAAhgAA=</HashCode>
+      <FileName>Forms\Dialogs\ChangeTextValueForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.CreateNewPetriNetwork" Collapsed="true">
+    <Position X="5.25" Y="3" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>cgABAJCQADEEABAAACCAAAACRAAIAGAAgCABCAQAAAA=</HashCode>
+      <FileName>Forms\Dialogs\CreateNewPetriNetwork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.StateHierarchySetting" Collapsed="true">
+    <Position X="6.5" Y="2" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAADAAQBAAAACAAAACAAAAAEAAgCAACAAAAAA=</HashCode>
+      <FileName>Forms\Dialogs\StateHierarchySetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Dialogs.StateMatrixSetting" Collapsed="true">
+    <Position X="8.75" Y="2" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAjAAABAAAACAAAACAAAIAUAAACAAAAABAAA=</HashCode>
+      <FileName>Forms\Dialogs\StateMatrixSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

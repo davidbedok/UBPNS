@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="PetriNetworkSimulator.Forms.Common.GeneralPictureToolWindow">
+    <Position X="6.25" Y="5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAIAAAAAAABQAwAAQAAACAAAgAAIABAAAAAAAAAA=</HashCode>
+      <FileName>Forms\Common\GeneralPictureToolWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Common.GeneralToolWindow">
+    <Position X="6" Y="0.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEACAAQAACABgAAAEAqQAQASAAAiAAgAAAAAABAAgIA=</HashCode>
+      <FileName>Forms\Common\GeneralToolWindow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Tools.MiniMap">
+    <Position X="0.5" Y="5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACAAAAAAAAKAAgACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\Tools\MiniMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Tools.NeighborhoodMatrix">
+    <Position X="9.5" Y="8.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AsACAAAgACAAAAQBAAKBABACBAAAgAyJAEAAEAADQAA=</HashCode>
+      <FileName>Forms\Tools\NeighborhoodMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Tools.PetriEventList">
+    <Position X="9.75" Y="5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACAAAAAEAQKAAAACAAABAAAABCAAAAAAAAA=</HashCode>
+      <FileName>Forms\Tools\PetriEventList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Tools.StateHierarchyTool">
+    <Position X="2" Y="8.75" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAhRAAAABCQAIAiIAFKYAABCAAABQABRAEIAAgCIgAA=</HashCode>
+      <FileName>Forms\Tools\StateHierarchyTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Tools.StateMatrix">
+    <Position X="5.5" Y="8.75" Width="3.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IIBQCAEAACASAUiAAAKJEAI2BAIAAAABAEAAAAAAAQA=</HashCode>
+      <FileName>Forms\Tools\StateMatrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkSimulator.Forms.Tools.StatisticsTool">
+    <Position X="3" Y="5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EEAAQAAAgqAAABAAAAKAAAICAAAAgAAEBCAAgQAAEgA=</HashCode>
+      <FileName>Forms\Tools\StatisticsTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="PetriNetworkLibrary.Model.Base.AbstractEdge" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAEAAAEAAAAIAAAACABAAAoQAEBCAAAAAA=</HashCode>
+      <FileName>Model\Base\AbstractEdge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.Base.AbstractEventDrivenItem" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAgAAAAIEAAAABAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Model\Base\AbstractEventDrivenItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.Base.AbstractItem" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAIAAAgCAEAAAAIAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Base\AbstractItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.Edge.EdgePositionTransition" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAECAAAAAEAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Edge\EdgePositionTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.Edge.EdgeTransitionPosition" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAQACAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Edge\EdgeTransitionPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.NetworkItem.Position" Collapsed="true">
+    <Position X="6.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEgAAAAABAAAQgEACAMAgAAAAABAABgBAABAAABAAA=</HashCode>
+      <FileName>Model\NetworkItem\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.NetworkItem.StateVector" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAgAgEgAAAQAAAAAABEIBAAACAAAAAAAA=</HashCode>
+      <FileName>Model\NetworkItem\StateVector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.NetworkItem.Transition" Collapsed="true">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIQAAAGEAAAAAAgAAAAJAAAAAEAAAAAAAIA=</HashCode>
+      <FileName>Model\NetworkItem\Transition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.NoteItem.Note" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAABIAAIACAACBAAAAA=</HashCode>
+      <FileName>Model\NoteItem\Note.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.TokenPlayer.Token" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAIEAAAAAAAAAAABAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Model\TokenPlayer\Token.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

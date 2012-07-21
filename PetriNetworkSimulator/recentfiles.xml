@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PetriNetworkFiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns="http://files.petrinetwork.hu">
+  <RecentFile xmlns="http://recentfile.petrinetwork.hu">
+    <NetworkName>Timed clock</NetworkName>
+    <FileName>.\networks\TimedClock.pn.xml</FileName>
+    <Description>
+      E=bedok.david@nik.uni-obuda.hu, CN=David Bedok,
+      OU=NIK, O=UNI-OBUDA, L=Budapest, S=Hungary, C=HU (2011.10.02.
+      18:24:48) Nyolcas szamlalo
+    </Description>
+  </RecentFile>
+  <RecentFile xmlns="http://recentfile.petrinetwork.hu">
+    <NetworkName>Dining philosophers</NetworkName>
+    <FileName>.\networks\\DiningPhilosophers.pn.xml</FileName>
+    <Description>
+      E=bedok.david@nik.uni-obuda.hu, CN=David Bedok,
+      OU=NIK, O=UNI-OBUDA, L=Budapest, S=Hungary, C=HU (2011.10.02.
+      18:24:56)
+    </Description>
+  </RecentFile>
+  <RecentFile xmlns="http://recentfile.petrinetwork.hu">
+    <NetworkName>Demo</NetworkName>
+    <FileName>.\networks\\Demo.pn.xml</FileName>
+    <Description>
+      E=bedok.david@nik.uni-obuda.hu, CN=David Bedok,
+      OU=NIK, O=UNI-OBUDA, L=Budapest, S=Hungary, C=HU (2011.10.30.
+      17:53:51)
+    </Description>
+  </RecentFile>
+  <RecentFile xmlns="http://recentfile.petrinetwork.hu">
+    <NetworkName>Infinite</NetworkName>
+    <FileName>.\networks\\Infinite.pn.xml</FileName>
+    <Description>
+      E=bedok.david@nik.uni-obuda.hu, CN=David Bedok,
+      OU=NIK, O=UNI-OBUDA, L=Budapest, S=Hungary, C=HU (2011.10.31.
+      9:12:16)
+    </Description>
+  </RecentFile>
+  <RecentFile xmlns="http://recentfile.petrinetwork.hu">
+    <NetworkName>InfiniteCapacity</NetworkName>
+    <FileName>.\networks\\InfiniteCapacity.pn.pn.xml</FileName>
+    <Description>
+      E=bedok.david@nik.uni-obuda.hu, CN=David Bedok,
+      OU=NIK, O=UNI-OBUDA, L=Budapest, S=Hungary, C=HU (2011.10.31.
+      9:23:15)
+    </Description>
+  </RecentFile>
+  <RecentFile xmlns="http://recentfile.petrinetwork.hu">
+    <NetworkName>Oscillator</NetworkName>
+    <FileName>.\networks\\Oscillator.pn.xml</FileName>
+    <Description>
+      E=bedok.david@nik.uni-obuda.hu, CN=David Bedok,
+      OU=NIK, O=UNI-OBUDA, L=Budapest, S=Hungary, C=HU (2011.10.31.
+      9:28:31) Oscillation is the repetitive variation, typically in
+      time, of some measure about a central value (often a point of
+      equilibrium) or between two or more different
+      states.
+    </Description>
+  </RecentFile>
+  <RecentFile xmlns="http://recentfile.petrinetwork.hu">
+    <NetworkName>ColorTokenDemo</NetworkName>
+    <FileName>.\networks\\ColorTokenDemo.pn.xml</FileName>
+    <Description>
+      E=bedok.david@nik.uni-obuda.hu, CN=David Bedok,
+      OU=NIK, O=UNI-OBUDA, L=Budapest, S=Hungary, C=HU (2011.10.31.
+      9:28:31)
+    </Description>
+  </RecentFile>    
+  <RecentFile xmlns="http://recentfile.petrinetwork.hu">
+    <NetworkName>Horserace</NetworkName>
+    <FileName>.\networks\\Horserace.pn.xml</FileName>
+    <Description>
+      E=bedok.david@nik.uni-obuda.hu, CN=David Bedok,
+      OU=NIK, O=UNI-OBUDA, L=Budapest, S=Hungary, C=HU (2011.10.31.
+      9:28:31)
+    </Description>
+  </RecentFile>   
+</PetriNetworkFiles>

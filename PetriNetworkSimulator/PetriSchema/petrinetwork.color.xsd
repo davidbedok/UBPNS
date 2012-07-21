@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://color.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://color.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" >
+  <xs:element name="DefaultColor" msdata:Prefix="c">
+    <xs:complexType>
+      <xs:attribute name="red" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="green" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="blue" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="alpha" msdata:Prefix="c" type="xs:byte" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkColor" msdata:Prefix="c">
+    <xs:complexType>
+      <xs:attribute name="red" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="green" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="blue" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="alpha" msdata:Prefix="c" type="xs:byte" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectedColor" msdata:Prefix="c">
+    <xs:complexType>
+      <xs:attribute name="red" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="green" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="blue" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="alpha" msdata:Prefix="c" type="xs:byte" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HelpColor" msdata:Prefix="c">
+    <xs:complexType>
+      <xs:attribute name="red" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="green" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="blue" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="alpha" msdata:Prefix="c" type="xs:byte" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateColor" msdata:Prefix="c">
+    <xs:complexType>
+      <xs:attribute name="red" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="green" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="blue" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="alpha" msdata:Prefix="c" type="xs:byte" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkAsReadyToFireColor" msdata:Prefix="c">
+    <xs:complexType>
+      <xs:attribute name="red" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="green" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="blue" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="alpha" msdata:Prefix="c" type="xs:byte" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClockColor" msdata:Prefix="c">
+    <xs:complexType>
+      <xs:attribute name="red" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="green" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="blue" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="alpha" msdata:Prefix="c" type="xs:byte" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TokenColor" msdata:Prefix="c">
+    <xs:complexType>
+      <xs:attribute name="red" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="green" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="blue" msdata:Prefix="c" type="xs:byte" />
+      <xs:attribute name="alpha" msdata:Prefix="c" type="xs:byte" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

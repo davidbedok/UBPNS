@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PetriNetwork" 
+	targetNamespace="http://petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" 
+	xmlns:pf="http://pointf.petrinetwork.hu" 
+	xmlns:sf="http://sizef.petrinetwork.hu" 
+	xmlns:pe="http://event.petrinetwork.hu" 
+	xmlns:i="http://item.petrinetwork.hu"
+	xmlns:ns="http://settings.petrinetwork.hu" 
+	xmlns:c="http://color.petrinetwork.hu" 
+	xmlns:f="http://font.petrinetwork.hu" 
+	xmlns:p="http://pen.petrinetwork.hu" 
+	xmlns:neit="http://networkitem.petrinetwork.hu" 
+	xmlns:sh="http://statehierarchy.petrinetwork.hu" >
+  <xs:import namespace="http://settings.petrinetwork.hu" schemaLocation="petrinetwork.settings.xsd" />
+  <xs:import namespace="http://font.petrinetwork.hu" schemaLocation="petrinetwork.font.xsd" />
+  <xs:import namespace="http://item.petrinetwork.hu" schemaLocation="petrinetwork.item.xsd" />  
+  <xs:import namespace="http://pointf.petrinetwork.hu" schemaLocation="petrinetwork.pointf.xsd" />
+  <xs:import namespace="http://sizef.petrinetwork.hu" schemaLocation="petrinetwork.sizef.xsd" />
+  <xs:import namespace="http://event.petrinetwork.hu" schemaLocation="petrinetwork.event.xsd" />
+  <xs:import namespace="http://statehierarchy.petrinetwork.hu" schemaLocation="petrinetwork.statehierarchy.xsd" />
+  <xs:import namespace="http://color.petrinetwork.hu" schemaLocation="petrinetwork.color.xsd" />
+  <xs:import namespace="http://networkitem.petrinetwork.hu" schemaLocation="petrinetwork.networkitem.xsd" />
+  <xs:import namespace="http://pen.petrinetwork.hu" schemaLocation="petrinetwork.pen.xsd" />
+  <xs:element name="PetriNetwork" msdata:IsDataSet="true" msdata:Locale="en-US" msdata:Prefix="pn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="pf:TopLeftPoint" />
+        <xs:element ref="pf:Origo" />
+        <xs:element ref="pf:LabelOffset" />
+        <xs:element ref="sf:Size" />
+        <xs:element ref="i:Events" />
+        <xs:element name="NetworkSettings" msdata:Prefix="pn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ns:Name" />
+              <xs:element ref="ns:Description" />
+              <xs:element ref="ns:Width" />
+              <xs:element ref="ns:Height" />
+              <xs:element ref="ns:StateHierarchyWidth" />
+              <xs:element ref="ns:StateHierarchyHeight" />
+              <xs:element ref="ns:TokenGenNumber" />
+              <xs:element ref="ns:PositionGenNumber" />
+              <xs:element ref="ns:TransitionGenNumber" />
+              <xs:element ref="ns:NoteGenNumber" />
+              <xs:element ref="ns:StateGenNumber" />
+              <xs:element ref="ns:TokenPrefix" />
+              <xs:element ref="ns:PositionPrefix" />
+              <xs:element ref="ns:TransitionPrefix" />
+              <xs:element ref="ns:NotePrefix" />
+              <xs:element ref="ns:StatePrefix" />
+              <xs:element ref="ns:DefaultEdgeWeight" />
+              <xs:element ref="ns:FireRule" />
+              <xs:element ref="ns:SimulationTimeout" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Events" msdata:Prefix="pn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="pe:Event" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VisualSettings" msdata:Prefix="pn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="c:DefaultColor" />
+              <xs:element ref="c:MarkColor" />
+              <xs:element ref="c:SelectedColor" />
+              <xs:element ref="c:HelpColor" />
+              <xs:element ref="c:StateColor" />
+              <xs:element ref="c:MarkAsReadyToFireColor" />
+              <xs:element ref="c:ClockColor" />
+              <xs:element ref="f:DefaultFont" />
+              <xs:element ref="p:DefaultEdgePen" />
+              <xs:element ref="p:DefaultPen" />
+              <xs:element ref="p:MarkPen" />
+              <xs:element ref="p:SelectedEdgePen" />
+              <xs:element ref="p:SelectedItemPen" />
+              <xs:element ref="p:HelpPen" />
+              <xs:element ref="p:StatePen" />
+              <xs:element ref="p:StateEdgePen" />
+              <xs:element ref="p:MarkAsReadyToFirePen" />
+              <xs:element ref="p:ClockPen" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VisibleSettings" msdata:Prefix="pn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="ns:EdgeLabel" />
+              <xs:element ref="ns:EdgeWeight" />
+              <xs:element ref="ns:Notes" />
+              <xs:element ref="ns:PositionLabel" />
+              <xs:element ref="ns:Priority" />
+              <xs:element ref="ns:TransitionLabel" />
+              <xs:element ref="ns:EdgeHelpLine" />
+              <xs:element ref="ns:ReadyToFireTransitions" />
+              <xs:element ref="ns:Capacity" />
+              <xs:element ref="ns:Clock" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Network" msdata:Prefix="pn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="neit:NetworkItems" />
+              <xs:element ref="neit:Edges" />
+              <xs:element ref="neit:Notes" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StateHierarchy" msdata:Prefix="pn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="sh:States" />
+              <xs:element ref="sh:Edges" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

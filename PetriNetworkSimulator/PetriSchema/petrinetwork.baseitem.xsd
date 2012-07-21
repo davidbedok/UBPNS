@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://baseitem.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://baseitem.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" >
+  <xs:attribute name="name" msdata:Prefix="bi" type="xs:string" />
+  <xs:attribute name="unid" msdata:Prefix="bi" type="xs:long" />
+  <xs:attribute name="showannotation" msdata:Prefix="bi" type="xs:boolean" />
+</xs:schema>

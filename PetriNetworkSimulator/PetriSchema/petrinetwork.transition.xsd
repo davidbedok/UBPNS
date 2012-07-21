@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://transition.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://transition.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified">
+  <xs:simpleType name="TransitionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NORMAL" />
+      <xs:enumeration value="SOURCE" />
+      <xs:enumeration value="SINK" />
+    </xs:restriction>
+  </xs:simpleType>		
+  <xs:attribute name="angle" msdata:Prefix="tra" type="xs:double" />
+  <xs:attribute name="priority" msdata:Prefix="tra" type="xs:int" />
+  <xs:attribute name="type" msdata:Prefix="tra" type="TransitionType" />
+  <xs:attribute name="delay" msdata:Prefix="tra" type="xs:int" />
+  <xs:attribute name="clockRadius" msdata:Prefix="tra" type="xs:float" />
+</xs:schema>

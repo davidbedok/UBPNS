@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://fontstyle.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://fontstyle.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" >
+  <xs:attribute name="bold" msdata:Prefix="fs" type="xs:boolean" />
+  <xs:attribute name="italic" msdata:Prefix="fs" type="xs:boolean" />
+  <xs:attribute name="underline" msdata:Prefix="fs" type="xs:boolean" />
+  <xs:attribute name="strikeout" msdata:Prefix="fs" type="xs:boolean" />
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://event.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://event.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" >
+  <xs:simpleType name="EventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PREACTIVATE" />
+      <xs:enumeration value="POSTACTIVATE" />
+      <xs:enumeration value="DEADLOCK" />
+	  <xs:enumeration value="CYCLE" />
+	  <xs:enumeration value="TICK" />
+    </xs:restriction>
+  </xs:simpleType>	
+  <xs:element name="ItemEvent" msdata:Prefix="pe">
+    <xs:complexType>
+      <xs:attribute name="name" msdata:Prefix="pe" type="xs:string" />
+      <xs:attribute name="type" msdata:Prefix="pe" type="EventType" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Event" msdata:Prefix="pe">
+    <xs:complexType>
+      <xs:attribute name="name" msdata:Prefix="pe" type="xs:string" />
+      <xs:attribute name="type" msdata:Prefix="pe" type="EventType" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateEvent" msdata:Prefix="pe">
+    <xs:complexType>
+      <xs:attribute name="name" msdata:Prefix="pe" type="xs:string" />
+      <xs:attribute name="type" msdata:Prefix="pe" type="EventType" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83CCB914-A8B1-48E0-BA5F-29AC3688C6DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PetriNetworkSimulator</RootNamespace>
+    <AssemblyName>PetriNetworkSimulator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>petri.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\PropertyGroupMoveTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PropertyGroupMoveTool.Designer.cs">
+      <DependentUpon>PropertyGroupMoveTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Common\Base\IPetriEvent.cs" />
+    <Compile Include="Entities\Common\Base\IPetriItem.cs" />
+    <Compile Include="Entities\Common\Edge\AbstractEdge.cs" />
+    <Compile Include="Entities\Common\Edge\AbstractEdge.xml.cs" />
+    <Compile Include="Entities\Common\Base\AbstractItem.cs" />
+    <Compile Include="Entities\Common\Base\AbstractItem.xml.cs" />
+    <Compile Include="Entities\Common\Network\AbstractNetwork.cs" />
+    <Compile Include="Entities\Common\Network\AbstractNetwork.xml.cs" />
+    <Compile Include="Entities\Common\Item\Base\AbstractNetworkItem.xml.cs" />
+    <Compile Include="Entities\Common\Item\Note\AbstractNote.cs" />
+    <Compile Include="Entities\Common\Item\Note\AbstractNote.xml.cs" />
+    <Compile Include="Entities\Common\Item\Position\AbstractPosition.xml.cs" />
+    <Compile Include="Entities\Common\TokenPlayer\AbstractToken.cs" />
+    <Compile Include="Entities\Common\TokenPlayer\AbstractToken.xml.cs" />
+    <Compile Include="Entities\Common\Item\Transition\AbstractTransition.xml.cs" />
+    <Compile Include="Entities\Enums\CustomEnum.cs" />
+    <Compile Include="Entities\Enums\EventType.cs" />
+    <Compile Include="Entities\Enums\Language.cs" />
+    <Compile Include="Entities\Enums\MoveCorner.cs" />
+    <Compile Include="Entities\Event\EventTrunk.cs" />
+    <Compile Include="Entities\Event\PetriEvent.cs" />
+    <Compile Include="Entities\Event\PetriEvent.xml.cs" />
+    <Compile Include="Entities\Event\PetriEventTransfer.cs" />
+    <Compile Include="Entities\History\TransitionHistoryItem.cs" />
+    <Compile Include="Entities\Utils\PetriXmlHelper.cs" />
+    <Compile Include="Entities\Utils\SearchItemResultTransfer.cs" />
+    <Compile Include="Exceptions\CloneNotSupportedException.cs" />
+    <Compile Include="Exceptions\CryptoException.cs" />
+    <Compile Include="Exceptions\SimApplicationException.cs" />
+    <Compile Include="Forms\Common\IUpdateCulture.cs" />
+    <Compile Include="Forms\Dialogs\CertificateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\CertificateForm.Designer.cs">
+      <DependentUpon>CertificateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\StateVectorProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\StateVectorProperties.Designer.cs">
+      <DependentUpon>StateVectorProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\TrustStoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\TrustStoreForm.Designer.cs">
+      <DependentUpon>TrustStoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\MDIParent.toolwindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\PetriEventList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\PetriEventList.Designer.cs">
+      <DependentUpon>PetriEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\TransitionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\TransitionHistory.Designer.cs">
+      <DependentUpon>TransitionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecentFiles\RecentFilesHelper.cs" />
+    <Compile Include="RecentFiles\recentfiles_rf.cs" />
+    <Compile Include="Utils\CertificateWrapper.cs" />
+    <Compile Include="Utils\CryptoHelper.cs" />
+    <Compile Include="Utils\CultureHelper.cs" />
+    <Compile Include="Utils\CursorHelper.cs" />
+    <Compile Include="Utils\GeneralStatistics.cs" />
+    <Compile Include="Entities\Enums\EdgeType.cs" />
+    <Compile Include="Entities\Enums\FireEvent.cs" />
+    <Compile Include="Entities\Enums\FireRule.cs" />
+    <Compile Include="Entities\Enums\NetworkNotifierAction.cs" />
+    <Compile Include="Entities\Enums\NetworkProperty.cs" />
+    <Compile Include="Entities\Enums\NetworkPropertyGroup.cs" />
+    <Compile Include="Entities\Enums\NetworkToolboxAction.cs" />
+    <Compile Include="Entities\Enums\NetworkToolboxItem.cs" />
+    <Compile Include="Entities\Enums\StateMatrixAction.cs" />
+    <Compile Include="Entities\Enums\TransitionType.cs" />
+    <Compile Include="Entities\Edge\EdgePositionTransition.cs" />
+    <Compile Include="Entities\State\Edge\EdgeStateState.cs" />
+    <Compile Include="Entities\State\Edge\EdgeStateState.xml.cs" />
+    <Compile Include="Entities\Edge\EdgeTransitionPosition.cs" />
+    <Compile Include="Entities\Utils\FireReturn.cs" />
+    <Compile Include="Entities\Utils\IdentityProvider.cs" />
+    <Compile Include="Entities\Utils\NetworkVisibleSettings.cs" />
+    <Compile Include="Entities\Utils\NetworkVisibleSettings.xml.cs" />
+    <Compile Include="Entities\Utils\NetworkVisualSettings.cs" />
+    <Compile Include="Entities\Utils\NetworkVisualSettings.xml.cs" />
+    <Compile Include="Entities\Item\NetNote\Note.cs" />
+    <Compile Include="Entities\Item\NetNote\Note.xml.cs" />
+    <Compile Include="Entities\Network\PetriNetwork.cs" />
+    <Compile Include="Entities\Network\PetriNetwork.xml.cs" />
+    <Compile Include="Entities\Item\NetPosition\Position.cs" />
+    <Compile Include="Entities\Common\Item\Position\AbstractPosition.cs" />
+    <Compile Include="Entities\Item\NetPosition\Position.xml.cs" />
+    <Compile Include="Entities\State\Hierarchy\StateHierarchy.cs" />
+    <Compile Include="Entities\State\Hierarchy\StateHierarchy.xml.cs" />
+    <Compile Include="Entities\State\Vector\StateVector.cs" />
+    <Compile Include="Entities\State\Vector\StateVector.xml.cs" />
+    <Compile Include="Entities\TokenPlayer\Token.cs" />
+    <Compile Include="Entities\Item\NetTransition\Transition.cs" />
+    <Compile Include="Entities\Common\Item\Base\AbstractNetworkItem.cs" />
+    <Compile Include="Entities\Common\Item\Transition\AbstractTransition.cs" />
+    <Compile Include="Entities\Item\NetTransition\Transition.xml.cs" />
+    <Compile Include="Exceptions\PetriNetworkException.cs" />
+    <Compile Include="Forms\Common\GeneralDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\GeneralDialogForm.Designer.cs">
+      <DependentUpon>GeneralDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common\GeneralPictureToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\GeneralToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\GeneralToolWindow.Designer.cs">
+      <DependentUpon>GeneralToolWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\ChangeTextValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\ChangeTextValueForm.Designer.cs">
+      <DependentUpon>ChangeTextValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\CreateNewPetriNetwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\CreateNewPetriNetwork.Designer.cs">
+      <DependentUpon>CreateNewPetriNetwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\ApplicationOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\ApplicationOptions.Designer.cs">
+      <DependentUpon>ApplicationOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\StateHierarchySetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\StateHierarchySetting.Designer.cs">
+      <DependentUpon>StateHierarchySetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\StateMatrixSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\StateMatrixSetting.Designer.cs">
+      <DependentUpon>StateMatrixSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\TextExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\TextExportForm.Designer.cs">
+      <DependentUpon>TextExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\MDIParent.Designer.cs">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\MDIParent.property.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\MiniMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\MiniMap.Designer.cs">
+      <DependentUpon>MiniMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\NeighborhoodMatrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\NeighborhoodMatrix.Designer.cs">
+      <DependentUpon>NeighborhoodMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\PetriNetworkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\PetriNetworkForm.Designer.cs">
+      <DependentUpon>PetriNetworkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\PetriPalette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\PetriPalette.Designer.cs">
+      <DependentUpon>PetriPalette.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\StateHierarchyTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\StateHierarchyTool.Designer.cs">
+      <DependentUpon>StateHierarchyTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\StatisticsTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\StatisticsTool.Designer.cs">
+      <DependentUpon>StatisticsTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Tools\StateMatrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\StateMatrix.Designer.cs">
+      <DependentUpon>StateMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ControlHelper.cs" />
+    <Compile Include="Utils\FixedNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\PropertyTag.cs" />
+    <EmbeddedResource Include="Controls\PropertyGroupMoveTool.resx">
+      <DependentUpon>PropertyGroupMoveTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common\GeneralDialogForm.resx">
+      <DependentUpon>GeneralDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common\GeneralToolWindow.resx">
+      <DependentUpon>GeneralToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\CertificateForm.resx">
+      <DependentUpon>CertificateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\ChangeTextValueForm.resx">
+      <DependentUpon>ChangeTextValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\CreateNewPetriNetwork.resx">
+      <DependentUpon>CreateNewPetriNetwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\ApplicationOptions.resx">
+      <DependentUpon>ApplicationOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\StateHierarchySetting.resx">
+      <DependentUpon>StateHierarchySetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\StateMatrixSetting.resx">
+      <DependentUpon>StateMatrixSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\StateVectorProperties.resx">
+      <DependentUpon>StateVectorProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\TextExportForm.resx">
+      <DependentUpon>TextExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\TrustStoreForm.resx">
+      <DependentUpon>TrustStoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\MiniMap.resx">
+      <DependentUpon>MiniMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\NeighborhoodMatrix.resx">
+      <DependentUpon>NeighborhoodMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\PetriEventList.resx">
+      <DependentUpon>PetriEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\PetriPalette.resx">
+      <DependentUpon>PetriPalette.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\StateHierarchyTool.resx">
+      <DependentUpon>StateHierarchyTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\StateMatrix.resx">
+      <DependentUpon>StateMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\StatisticsTool.resx">
+      <DependentUpon>StatisticsTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\TransitionHistory.resx">
+      <DependentUpon>TransitionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Localization.en-US.resx" />
+    <EmbeddedResource Include="Localization\Localization.hu-HU.resx" />
+    <EmbeddedResource Include="Forms\Main\MDIParent.resx">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\PetriNetworkForm.resx">
+      <DependentUpon>PetriNetworkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="ClassDiagrams\cd_culture.cd" />
+    <None Include="ClassDiagrams\cd_delegates.cd" />
+    <None Include="ClassDiagrams\cd_enums.cd" />
+    <None Include="ClassDiagrams\cd_exceptions.cd" />
+    <None Include="ClassDiagrams\cd_forms.cd" />
+    <None Include="ClassDiagrams\cd_crypto.cd" />
+    <None Include="ClassDiagrams\cd_petrievent.cd" />
+    <None Include="ClassDiagrams\cd_petrinetworkitem.cd" />
+    <None Include="ClassDiagrams\cd_petrinetwork.cd" />
+    <None Include="ClassDiagrams\cd_recentfiles.cd" />
+    <None Include="ClassDiagrams\cd_states.cd" />
+    <None Include="ClassDiagrams\cd_toolforms.cd" />
+    <None Include="ClassDiagrams\cd_dialogforms.cd" />
+    <None Include="ClassDiagrams\cd_petrinetwork_head.cd" />
+    <None Include="ClassDiagrams\cd_petrinetworkitem_head.cd" />
+    <None Include="ClassDiagrams\cd_toolforms_head.cd" />
+    <None Include="ClassDiagrams\cd_dialogforms_head.cd" />
+    <None Include="ClassDiagrams\cd_others.cd" />
+    <None Include="PetriSchema\petrinetwork.baseitem.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.color.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.edge.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.event.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.font.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.fontstyle.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.networkitem.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.note.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.pen.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.pn.xsd" />
+    <None Include="PetriSchema\petrinetwork.pointf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.position.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.settings.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.sizef.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.stateedge.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.statehierarchy.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.statevector.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.token.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetriSchema\petrinetwork.transition.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="truststore\certificates\davidbedok.der" />
+    <None Include="truststore\certificates\davidbedok.pem.cer" />
+    <None Include="truststore\certificates\ericsson.der" />
+    <None Include="truststore\certificates\ericsson.pem.cer" />
+    <None Include="truststore\certificates\uniobuda.der" />
+    <None Include="truststore\certificates\uniobuda.pem.cer" />
+    <None Include="truststore\davidbedok_public.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="truststore\ericsson_public.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="truststore\uniobuda_public.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitApplication.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newProject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openProject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\position.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\token.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trashtoken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autofire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plain_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="networks\ColorTokenDemo.pn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="networks\Demo.pn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="networks\DiningPhilosophers.pn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="networks\Horserace.pn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="networks\Infinite.pn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="networks\InfiniteCapacity.pn.pn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="networks\Oscillator.pn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="networks\TimedClock.pn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="petri.ico" />
+    <Content Include="recentfiles.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cursor_position.cur" />
+    <None Include="Resources\transition_history.png" />
+    <None Include="Resources\cursor_transition.cur" />
+    <None Include="Resources\cursor_token.cur" />
+    <None Include="Resources\cursor_selectedge.cur" />
+    <None Include="Resources\cursor_note.cur" />
+    <None Include="Resources\cursor_edge_def.cur" />
+    <None Include="Resources\cursor_edge.cur" />
+    <None Include="Resources\transition.cur" />
+    <None Include="Resources\petricup.jpg" />
+    <None Include="Resources\statistics.png" />
+    <None Include="Resources\statematrix.png" />
+    <None Include="Resources\statehierarchy.png" />
+    <None Include="Resources\petripalette.png" />
+    <None Include="Resources\neighborhoodmatrix.png" />
+    <None Include="Resources\minimap.png" />
+    <None Include="Resources\eventlist.png" />
+    <None Include="Resources\recentfiles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

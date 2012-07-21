@@ -1,0 +1,59 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://pen.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://pen.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" >
+  <xs:element name="DefaultEdgePen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefaultPen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkPen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectedEdgePen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectedItemPen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HelpPen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatePen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateEdgePen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkAsReadyToFirePen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClockPen" msdata:Prefix="p">
+    <xs:complexType>
+      <xs:attribute name="width" msdata:Prefix="p" type="xs:float" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

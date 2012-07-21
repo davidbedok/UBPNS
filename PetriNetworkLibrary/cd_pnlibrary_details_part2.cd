@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="PetriNetworkLibrary.Model.Base.AbstractEventDrivenItem">
+    <Position X="3.75" Y="3.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="PetriNetworkLibrary.Model.Base.AbstractItem" ManuallyRouted="true">
+      <Path>
+        <Point X="5.125" Y="2.815" />
+        <Point X="5.125" Y="3.01" />
+        <Point X="5" Y="3.01" />
+        <Point X="5" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAgAAAAIEAAAABAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Model\Base\AbstractEventDrivenItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.Base.AbstractItem">
+    <Position X="4.25" Y="1" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAIAAAgCAEAAAAIAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Base\AbstractItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.NetworkItem.Position">
+    <Position X="0.5" Y="6" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQEgAAAAABAAAQgEACAMAgAAAAABAABgBAABAAABAAA=</HashCode>
+      <FileName>Model\NetworkItem\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.NetworkItem.StateVector">
+    <Position X="3" Y="6" Width="4" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAIAAAAAAAAAgAgEgAAAQAAAAAABEIBAAACAAAAAAAA=</HashCode>
+      <FileName>Model\NetworkItem\StateVector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetriNetworkLibrary.Model.NetworkItem.Transition">
+    <Position X="7.25" Y="6" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIQAAAGEAAAAAAgAAAAJAAAAAEAAAAAAAIA=</HashCode>
+      <FileName>Model\NetworkItem\Transition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

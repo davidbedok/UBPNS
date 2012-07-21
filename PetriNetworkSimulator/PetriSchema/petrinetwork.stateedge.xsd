@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://stateedge.petrinetwork.hu" 
+	xmlns:mstns="http://petrinetwork.hu" 
+	xmlns="http://stateedge.petrinetwork.hu" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	attributeFormDefault="qualified" 
+	elementFormDefault="qualified" >
+  <xs:element name="StateEdge" msdata:Prefix="se">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="StartState" msdata:Prefix="se" type="xs:long" minOccurs="0" />
+        <xs:element name="EndState" msdata:Prefix="se" type="xs:long" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

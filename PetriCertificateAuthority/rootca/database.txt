@@ -1,0 +1,1 @@
+V	120927190459Z		01	unknown	/C=HU/ST=Hungary/O=UNI-OBUDA/OU=NIK/CN=Petri Universitas Budensis Sub CA/emailAddress=petrisubca@qwaevisz.hu
