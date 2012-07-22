@@ -22,7 +22,7 @@ namespace PetriNetworkLibrary.Model.NetworkItem
         }
 
         public StateVector(string name, long unid, PetriNetwork network)
-            : base(name, unid)
+            : base(name, unid, false)
         {
             this.tokenDistribution = new Dictionary<Int64, List<Token>>();
             foreach (Position position in network.Positions)
@@ -34,7 +34,7 @@ namespace PetriNetworkLibrary.Model.NetworkItem
         }
 
         private StateVector(string name, long unid, Dictionary<Int64, List<Token>> tokenDistribution)
-            : base(name, unid)
+            : base(name, unid, false)
         {
             this.tokenDistribution = tokenDistribution;
         }
@@ -163,7 +163,7 @@ namespace PetriNetworkLibrary.Model.NetworkItem
                     Token token = Token.findTokenByUnid(alltokens, tokUnid);
                     if (token == null)
                     {
-                        token = new Token("", tokUnid, Color.Black);
+                        token = new Token("", tokUnid, true, Color.Black);
                     }
                     ret.Add(token);
                 }
@@ -211,8 +211,9 @@ namespace PetriNetworkLibrary.Model.NetworkItem
                         break;
                 }
             }
-            string name = PetriXmlHelper.openStringAttributeFromNode(node, "name", PetriXmlHelper.XML_STATE_NAMESPACE);
-            long unid = PetriXmlHelper.openLongAttributeFromNode(node, "unid", PetriXmlHelper.XML_STATE_NAMESPACE);
+            string name = AbstractItem.readItemName(node, PetriXmlHelper.XML_STATE_NAMESPACE);
+            long unid = AbstractItem.readItemUnid(node, PetriXmlHelper.XML_STATE_NAMESPACE);
+            
             StateVector ret = new StateVector(name, unid, tokenDistribution);
             ret.EventTrunk.addEvents(events);
             return ret;

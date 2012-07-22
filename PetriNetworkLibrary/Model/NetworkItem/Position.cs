@@ -8,6 +8,7 @@ using System.Xml;
 using PetriNetworkLibrary.Event;
 using PetriNetworkLibrary.Utility;
 using System.Drawing;
+using PetriNetworkSimulator.Entities.Common.Base;
 
 namespace PetriNetworkLibrary.Model.NetworkItem
 {
@@ -32,8 +33,13 @@ namespace PetriNetworkLibrary.Model.NetworkItem
             get { return this.Tokens.Count; }
         }
 
-        public Position(string name, long unid, int capacityLimit)
-            : base(name, unid)
+        public Position(AbstractItemData itemData, int capacityLimit)
+            : this(itemData.name, itemData.unid, itemData.showAnnotation, capacityLimit)
+        {
+        }
+
+        public Position(string name, long unid, bool showAnnotation, int capacityLimit)
+            : base(name, unid, showAnnotation)
         {
             this.capacityLimit = capacityLimit;
             this.tokens = new List<Token>();
@@ -177,10 +183,8 @@ namespace PetriNetworkLibrary.Model.NetworkItem
                         break;
                 }
             }
-            string name = AbstractItem.openNameAttrFromNode(node);
-            long unid = AbstractItem.openUnidAttrFromNode(node);
             int capacityLimit = Position.openCapacityLimitAttrFromNode(node);
-            Position ret = new Position(name, unid, capacityLimit);
+            Position ret = new Position(AbstractItem.readItem(node), capacityLimit);
             ret.EventTrunk.addEvents(events);
             ret.tokens.AddRange(tokens);
             return ret;

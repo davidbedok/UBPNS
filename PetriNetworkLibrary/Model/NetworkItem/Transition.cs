@@ -6,6 +6,7 @@ using PetriNetworkLibrary.Model.Base;
 using PetriNetworkLibrary.Utility;
 using System.Xml;
 using PetriNetworkLibrary.Event;
+using PetriNetworkSimulator.Entities.Common.Base;
 
 namespace PetriNetworkLibrary.Model.NetworkItem
 {
@@ -31,8 +32,13 @@ namespace PetriNetworkLibrary.Model.NetworkItem
             get { return this.delay; }
         }
 
-        public Transition(string name, long unid, int priority, TransitionType transitionType, int delay) 
-            : base(name, unid)
+        public Transition(AbstractItemData itemData, int priority, TransitionType transitionType, int delay)
+            : this(itemData.name, itemData.unid, itemData.showAnnotation, priority, transitionType, delay)
+        {
+        }
+
+        public Transition(string name, long unid, bool showAnnotation, int priority, TransitionType transitionType, int delay)
+            : base(name, unid, showAnnotation)
         {
             this.priority = priority;
             this.transitionType = transitionType;
@@ -70,12 +76,10 @@ namespace PetriNetworkLibrary.Model.NetworkItem
                         break;
                 }
             }
-            string name = AbstractItem.openNameAttrFromNode(node);
-            long unid = AbstractItem.openUnidAttrFromNode(node);
             int priority = Transition.openPriorityAttrFromNode(node);
             TransitionType transitionType = Transition.openTransitionTypeAttrFromNode(node);
             int delay = Transition.openDelayAttrFromNode(node);
-            Transition ret = new Transition(name, unid, priority, transitionType, delay);
+            Transition ret = new Transition(AbstractItem.readItem(node), priority, transitionType, delay);
             ret.EventTrunk.addEvents(events);
             return ret;
         }

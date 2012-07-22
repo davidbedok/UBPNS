@@ -6,6 +6,7 @@ using System.Drawing;
 using PetriNetworkLibrary.Model.Base;
 using System.Xml;
 using PetriNetworkLibrary.Utility;
+using PetriNetworkSimulator.Entities.Common.Base;
 
 namespace PetriNetworkLibrary.Model.TokenPlayer
 {
@@ -19,8 +20,13 @@ namespace PetriNetworkLibrary.Model.TokenPlayer
             get { return this.tokenColor; }
         }
 
-        public Token(string name, long unid, Color tokenColor)
-            : base(name, unid)
+        public Token(AbstractItemData itemData, Color tokenColor)
+            : this(itemData.name, itemData.unid, itemData.showAnnotation, tokenColor)
+        {
+        }
+
+        public Token(string name, long unid, bool showAnnotation, Color tokenColor)
+            : base(name, unid, showAnnotation)
         {
             this.tokenColor = tokenColor;
         }
@@ -65,7 +71,7 @@ namespace PetriNetworkLibrary.Model.TokenPlayer
                         break;
                 }
             }
-            return new Token(AbstractItem.openNameAttrFromNode(node), AbstractItem.openUnidAttrFromNode(node), color);
+            return new Token(AbstractItem.readItem(node), color);
         }
 
         private static Color openColor(XmlNode node)

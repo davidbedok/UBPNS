@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using PetriNetworkLibrary.Event;
 using PetriNetworkLibrary.Utility;
+using PetriNetworkSimulator.Entities.Common.Base;
 
 namespace PetriNetworkLibrary.Model.Base
 {
@@ -22,8 +23,13 @@ namespace PetriNetworkLibrary.Model.Base
             get { return this.statistics; }
         }
 
-        public AbstractEventDrivenItem(string name, long unid)
-            : base(name, unid)
+        public AbstractEventDrivenItem(AbstractItemData itemData)
+            : this(itemData.name, itemData.unid, itemData.showAnnotation)
+        {
+        }
+
+        public AbstractEventDrivenItem(string name, long unid, bool showAnnotation)
+            : base(name, unid, showAnnotation)
         {
             this.statistics = new GeneralStatistics();
             this.eventTrunk = new EventTrunk();

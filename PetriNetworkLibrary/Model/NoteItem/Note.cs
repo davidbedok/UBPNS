@@ -5,6 +5,7 @@ using System.Text;
 using PetriNetworkLibrary.Model.Base;
 using System.Xml;
 using PetriNetworkLibrary.Utility;
+using PetriNetworkSimulator.Entities.Common.Base;
 
 namespace PetriNetworkLibrary.Model.NoteItem
 {
@@ -24,8 +25,13 @@ namespace PetriNetworkLibrary.Model.NoteItem
             get { return this.text; }
         }
 
-        public Note(string name, long unid, AbstractItem attachedItem, string text)
-            : base(name, unid)
+        public Note(AbstractItemData itemData, AbstractItem attachedItem, string text)
+            : this(itemData.name, itemData.unid, itemData.showAnnotation, attachedItem, text)
+        {
+        }
+
+        public Note(string name, long unid, bool showAnnotation, AbstractItem attachedItem, string text)
+            : base(name, unid, showAnnotation)
         {
            this.attachedItem = attachedItem;
            this.text = text;
@@ -58,11 +64,9 @@ namespace PetriNetworkLibrary.Model.NoteItem
                         break;
                 }
             }
-            string name = AbstractItem.openNameAttrFromNode(node);
-            long unid = AbstractItem.openUnidAttrFromNode(node);
             long attachedItemUnid = Note.openAttachedItemAttrFromNode(node);
             AbstractItem attachedItem = AbstractItem.findItemByUnid(itemsAndEdges, attachedItemUnid);
-            return new Note(name, unid, attachedItem, text);
+            return new Note(AbstractItem.readItem(node), attachedItem, text);
         }
 
         private static long openAttachedItemAttrFromNode(XmlNode node)

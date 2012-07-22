@@ -47,6 +47,9 @@
     <Compile Include="Model\Base\AbstractEdge.cs" />
     <Compile Include="Model\Base\AbstractItem.cs" />
     <Compile Include="Model\Base\AbstractEventDrivenItem.cs" />
+    <Compile Include="Model\Base\AbstractItem.open.xml.cs" />
+    <Compile Include="Model\Base\AbstractItem.save.xml.cs" />
+    <Compile Include="Model\Base\AbstractItemData.cs" />
     <Compile Include="Model\Edge\EdgePositionTransition.cs" />
     <Compile Include="Model\Edge\EdgeTransitionPosition.cs" />
     <Compile Include="Model\History\TransitionHistoryItem.cs" />

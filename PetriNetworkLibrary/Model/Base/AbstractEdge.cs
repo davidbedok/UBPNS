@@ -6,6 +6,7 @@ using PetriNetworkLibrary.Model.NetworkItem;
 using PetriNetworkLibrary.Utility;
 using System.Xml;
 using PetriNetworkLibrary.Model.Edge;
+using PetriNetworkSimulator.Entities.Common.Base;
 
 namespace PetriNetworkLibrary.Model.Base {
 
@@ -38,8 +39,13 @@ namespace PetriNetworkLibrary.Model.Base {
             get { return this.edgeType; }
         }
 
-        public AbstractEdge(string name, long unid, int weight, Position position, Transition transition, EdgeType edgeType)
-            : base(name, unid)
+        public AbstractEdge(AbstractItemData itemData, int weight, Position position, Transition transition, EdgeType edgeType)
+            : this(itemData.name, itemData.unid, itemData.showAnnotation, weight, position, transition, edgeType)
+        {
+        }
+
+        public AbstractEdge(string name, long unid, bool showAnnotation, int weight, Position position, Transition transition, EdgeType edgeType)
+            : base(name, unid, showAnnotation)
         {
             this.weight = weight;
             this.position = position;
@@ -117,16 +123,15 @@ namespace PetriNetworkLibrary.Model.Base {
             Transition transition = (Transition)AbstractEventDrivenItem.findNetworkItemByUnid(items, transitionUnid); ;
             int weight = AbstractEdge.openWeightAttrFromNode(node);
             EdgeType edgeType = AbstractEdge.openEdgeTypeFromXml(node);
-            string name = AbstractItem.openNameAttrFromNode(node);
-            long unid = AbstractItem.openUnidAttrFromNode(node);
+            AbstractItemData itemData = AbstractItem.readItem(node);
             AbstractEdge ret = null;
             if (isStartPosition)
             {
-                ret = new EdgePositionTransition(name, unid, weight, position, transition, edgeType);
+                ret = new EdgePositionTransition(itemData, weight, position, transition, edgeType);
             }
             else
             {
-                ret = new EdgeTransitionPosition(name, unid, weight, transition, position, edgeType);
+                ret = new EdgeTransitionPosition(itemData, weight, transition, position, edgeType);
             }
             return ret;
         }

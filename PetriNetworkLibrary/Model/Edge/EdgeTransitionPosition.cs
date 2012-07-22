@@ -5,6 +5,7 @@ using System.Text;
 using PetriNetworkLibrary.Model.Base;
 using PetriNetworkLibrary.Model.NetworkItem;
 using PetriNetworkLibrary.Utility;
+using PetriNetworkSimulator.Entities.Common.Base;
 
 namespace PetriNetworkLibrary.Model.Edge
 {
@@ -31,8 +32,13 @@ namespace PetriNetworkLibrary.Model.Edge
             get { return this.position; }
         }
 
-        public EdgeTransitionPosition(string name, long unid, int weight, Transition transition, Position position, EdgeType edgeType)
-            : base(name, unid, weight, position, transition, edgeType)
+        public EdgeTransitionPosition(AbstractItemData itemData, int weight, Transition transition, Position position, EdgeType edgeType)
+            : this(itemData.name, itemData.unid, itemData.showAnnotation, weight, transition, position, edgeType)
+        {
+        }
+
+        public EdgeTransitionPosition(string name, long unid, bool showAnnotation, int weight, Transition transition, Position position, EdgeType edgeType)
+            : base(name, unid, showAnnotation, weight, position, transition, edgeType)
         {
             
         }

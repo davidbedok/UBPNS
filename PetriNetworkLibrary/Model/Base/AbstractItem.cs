@@ -4,17 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using PetriNetworkLibrary.Utility;
+using PetriNetworkSimulator.Entities.Common.Base;
 
 namespace PetriNetworkLibrary.Model.Base
 {
-    public abstract class AbstractItem : System.Object
+    public abstract partial class AbstractItem : System.Object
     {
-        protected readonly string name;
-        protected readonly long unid;
+        private const string XML_NAME = "name";
+        private const string XML_UNID = "unid";
+        private const string XML_SHOWANNOTATION = "showannotation";
+
+        protected string name;
+        protected long unid;
+        protected bool showAnnotation;
 
         public string Name
         {
             get { return this.name; }
+            set { this.name = value; }
         }
 
         public long Unid
@@ -22,10 +29,22 @@ namespace PetriNetworkLibrary.Model.Base
             get { return this.unid; }
         }
 
-        public AbstractItem(string name, long unid)
+        public bool ShowAnnotation
+        {
+            get { return this.showAnnotation; }
+            set { this.showAnnotation = value; }
+        }
+
+        public AbstractItem(AbstractItemData itemData)
+            : this(itemData.name, itemData.unid, itemData.showAnnotation)
+        {
+        }
+
+        public AbstractItem(string name, long unid, bool showAnnotation)
         {
             this.name = name;
             this.unid = unid;
+            this.showAnnotation = showAnnotation;
         }
 
         public override string ToString()
@@ -33,18 +52,10 @@ namespace PetriNetworkLibrary.Model.Base
             return "  " + this.name + " (unid: " + this.unid + ")";
         }
 
-        protected static string openNameAttrFromNode(XmlNode node)
-        {
-            return PetriXmlHelper.openStringAttributeFromNode(node, "name", PetriXmlHelper.XML_BASEITEM_NAMESPACE);
-        }
-
-        protected static long openUnidAttrFromNode(XmlNode node)
-        {
-            return PetriXmlHelper.openLongAttributeFromNode(node, "unid", PetriXmlHelper.XML_BASEITEM_NAMESPACE);
-        }
-
         protected static AbstractItem findItemByUnid(List<AbstractItem> items, long unid)
         {
+            return items.Find(item => item.unid == unid);
+            /*
             AbstractItem ret = null;
             int i = 0;
             bool find = false;
@@ -58,6 +69,7 @@ namespace PetriNetworkLibrary.Model.Base
                 i++;
             }
             return ret;
+            */
         }
 
     }

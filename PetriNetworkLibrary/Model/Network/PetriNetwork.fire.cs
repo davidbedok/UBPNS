@@ -159,7 +159,7 @@ namespace PetriNetworkLibrary.Model.Network
                         }
                         else
                         {
-                            token = new Token("", this.unidGenNumber++, Color.Black);
+                            token = new Token("", this.unidGenNumber++, false, Color.Black);
                         }
                         position.addToken(token);
                     }
