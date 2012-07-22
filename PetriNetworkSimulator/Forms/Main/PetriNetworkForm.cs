@@ -368,31 +368,35 @@ namespace PetriNetworkSimulator.Forms.Main
 
         private void pbPetriNetwork_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            PointF noAlignCoordinates = this.convertPixelToCoord(e.X, e.Y);
-            AbstractItem item = this.petriNetwork.getVisualItemByCoordinates(noAlignCoordinates);
-            if (item != null)
+            NetworkToolboxItem ntItem = (this.MdiParent as MDIParent).SelectedToolboxItem;
+            if (!NetworkToolboxItem.TOKEN.Equals(ntItem) && !NetworkToolboxItem.DELETETOKEN.Equals(ntItem))
             {
-                ChangeTextValueForm questionForm = new ChangeTextValueForm();
-                questionForm.Text = item.ToString();
-                if (item is AbstractNote)
+                PointF noAlignCoordinates = this.convertPixelToCoord(e.X, e.Y);
+                AbstractItem item = this.petriNetwork.getVisualItemByCoordinates(noAlignCoordinates);
+                if (item != null)
                 {
-                    AbstractNote itemNote = (AbstractNote)item;
-                    questionForm.QuestionLabel = "Name: ";
-                    questionForm.AnswerValue = itemNote.Text;
-                    if (questionForm.ShowDialog() == DialogResult.OK)
+                    ChangeTextValueForm questionForm = new ChangeTextValueForm();
+                    questionForm.Text = item.ToString();
+                    if (item is AbstractNote)
                     {
-                        itemNote.Text = questionForm.AnswerValue;
-                        this.parentCallReDraw(NetworkToolboxAction.REFRESH, true);
+                        AbstractNote itemNote = (AbstractNote)item;
+                        questionForm.QuestionLabel = "Name: ";
+                        questionForm.AnswerValue = itemNote.Text;
+                        if (questionForm.ShowDialog() == DialogResult.OK)
+                        {
+                            itemNote.Text = questionForm.AnswerValue;
+                            this.parentCallReDraw(NetworkToolboxAction.REFRESH, true);
+                        }
                     }
-                }
-                else
-                {   
-                    questionForm.QuestionLabel = "Name: ";
-                    questionForm.AnswerValue = item.Name;
-                    if (questionForm.ShowDialog() == DialogResult.OK)
+                    else
                     {
-                        item.Name = questionForm.AnswerValue;
-                        this.parentCallReDraw(NetworkToolboxAction.REFRESH, true);
+                        questionForm.QuestionLabel = "Name: ";
+                        questionForm.AnswerValue = item.Name;
+                        if (questionForm.ShowDialog() == DialogResult.OK)
+                        {
+                            item.Name = questionForm.AnswerValue;
+                            this.parentCallReDraw(NetworkToolboxAction.REFRESH, true);
+                        }
                     }
                 }
             }
